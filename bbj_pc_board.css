@@ -1,0 +1,487 @@
+@charset "utf-8";
+
+/*--- 틀 ---*/
+.content_board_box_wrap {position:relative; float:left; width:1080px; box-sizing:border-box;}
+.content_board_box_wrap.margin {margin:40px 0 0 0;}
+.content_board_box_wrap.h_bb-board {min-height:806px;}
+.ad_box_wrap.margin {margin:40px 0 0 0;}
+.ad_box_wrap.h_bb-board {height:806px;}
+/*----------*/
+
+/*--- 방부장게시판 상단 ---*/
+.bb-board_head {position:relative; height:152px; background-color:#fff;}
+.bb-board_head .tit {position:absolute; top:32px; left:11px; font-size:28px; font-weight:600; color:#595757; letter-spacing:-1px;}
+.bb-board_head .tit .msize {font-size:24px; margin:0 0 0 6px; font-weight:normal;}
+.bb-board_head .ment {position:absolute; top:72px; left:13px; font-size:15px; color:#808080; letter-spacing:-0.7px;}
+.bb-board_head .navi_all,
+.bb-board_head .navi_talktalk,
+.bb-board_head .navi_malhagi {position:absolute; bottom:38px; height:46px; -webkit-border-radius:25px; border-radius:25px; font-size:17px; color:#616161; text-align:center; line-height:45px; letter-spacing:-1px;}
+.bb-board_head .navi_all {right:379px; width:72px; border:1px solid #fe668c;}
+.bb-board_head .navi_talktalk {right:215px; width:124px; border:1px solid #80b21b;}
+.bb-board_head .navi_malhagi {right:7px; width:168px; border:1px solid #4091d2;}
+.bb-board_head .navi_all:hover {color:#fe668c;}
+.bb-board_head .navi_talktalk:hover {color:#80b21b;}
+.bb-board_head .navi_malhagi:hover {color:#4091d2;}
+.bb-board_head .navi_all.on,
+.bb-board_head .navi_talktalk.on,
+.bb-board_head .navi_malhagi.on {font-weight:600; color:#fff;}
+.bb-board_head .navi_all.on {background-color:#fe668c;}
+.bb-board_head .navi_talktalk.on {background-color:#80b21b;}
+.bb-board_head .navi_malhagi.on {background-color:#4091d2;}
+.bb-board_head .navi_all.on .bubble-tail,
+.bb-board_head .navi_talktalk.on .bubble-tail,
+.bb-board_head .navi_malhagi.on .bubble-tail {position:absolute; top:100%; left:50%; width:20px; height:11px; margin:-2px 0 0 -10px; background-size:20px 11px;}
+.bb-board_head .navi_all.on .bubble-tail {background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/bubble-tail1.png') no-repeat;}
+.bb-board_head .navi_talktalk.on .bubble-tail {background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/bubble-tail2.png') no-repeat;}
+.bb-board_head .navi_malhagi.on .bubble-tail {background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/bubble-tail3.png') no-repeat;}
+/*-------------------------*/
+
+/*--- 방부장게시판 글목록 리스트 ---*/
+.bb-board_lists {position:relative; height:auto; background-color:#fff;}
+.bb-board_lists .head {height:36px; border-top:1px solid #d6d6d6; background-color:#f2f2f2; font-size:14px; color:#000; line-height:35px; letter-spacing:0;}
+.bb-board_lists .head .cue1,
+.bb-board_lists .head .cue2,
+.bb-board_lists .head .cue3,
+.bb-board_lists .head .cue4,
+.bb-board_lists .head .cue5 {display:inline-block; position:relative; text-align:center;}
+.bb-board_lists .head .cue1 {width:91px;}
+.bb-board_lists .head .cue2 {float:right; width:82px;}
+.bb-board_lists .head .cue3 {float:right; width:82px; margin:0 1px 0 0;}
+.bb-board_lists .head .cue4 {float:right; width:108px; margin:0 1px 0 0;}
+.bb-board_lists .head .cue5 {float:right; width:82px; margin:0 1px 0 0;}
+.bb-board_lists .head .line {display:inline-block; position:absolute; top:13px; width:1px; height:12px; background-color:#bababa;}
+.bb-board_lists .head .line.left1 {left:91px;}
+.bb-board_lists .head .line.right1 {right:82px;}
+.bb-board_lists .head .line.right2 {right:165px;}
+.bb-board_lists .head .line.right3 {right:274px;}
+.bb-board_lists .head .line.right4 {right:82px;}
+.bb-board_lists .list1ea {position:relative; height:59px; border-bottom:1px solid #e0e0e0; line-height:60px;}
+.bb-board_lists .list1ea .first {display:inline-block; position:absolute; margin:0 0 0 25px; font-size:15.5px;}
+.bb-board_lists .list1ea .first .tit {padding:0 0 1px 0;}
+.bb-board_lists .list1ea .first .tit.c_1c1e1f {color:#1c1e1f;}
+.bb-board_lists .list1ea .first .tit.c_2b6bc4 {color:#2b6bc4;}
+.bb-board_lists .list1ea .first .tit.c_7435d4 {color:#7435d4;}
+.bb-board_lists .list1ea .first .tit.c_9b22c7 {color:#9b22c7;}
+.bb-board_lists .list1ea .first .tit.c_ad3197 {color:#ad3197;}
+.bb-board_lists .list1ea .first .tit.c_974659 {color:#974659;}
+.bb-board_lists .list1ea .first .tit.c_c7562a {color:#c7562a;}
+.bb-board_lists .list1ea .first .tit.c_a88114 {color:#a88114;}
+.bb-board_lists .list1ea .first .tit.c_60871c {color:#60871c;}
+.bb-board_lists .list1ea .first .tit.c_257a4d {color:#257a4d;}
+.bb-board_lists .list1ea .first .tit.c_09737d {color:#09737d;}
+.bb-board_lists .list1ea .first .tit:hover {cursor:pointer;}
+.bb-board_lists .list1ea .first .tit.c_1c1e1f:hover {border-bottom:1px solid #1c1e1f;}
+.bb-board_lists .list1ea .first .tit.c_2b6bc4:hover {border-bottom:1px solid #2b6bc4;}
+.bb-board_lists .list1ea .first .tit.c_7435d4:hover {border-bottom:1px solid #7435d4;}
+.bb-board_lists .list1ea .first .tit.c_9b22c7:hover {border-bottom:1px solid #9b22c7;}
+.bb-board_lists .list1ea .first .tit.c_ad3197:hover {border-bottom:1px solid #ad3197;}
+.bb-board_lists .list1ea .first .tit.c_974659:hover {border-bottom:1px solid #974659;}
+.bb-board_lists .list1ea .first .tit.c_c7562a:hover {border-bottom:1px solid #c7562a;}
+.bb-board_lists .list1ea .first .tit.c_a88114:hover {border-bottom:1px solid #a88114;}
+.bb-board_lists .list1ea .first .tit.c_60871c:hover {border-bottom:1px solid #60871c;}
+.bb-board_lists .list1ea .first .tit.c_257a4d:hover {border-bottom:1px solid #257a4d;}
+.bb-board_lists .list1ea .first .tit.c_09737d:hover {border-bottom:1px solid #09737d;}
+.bb-board_lists .list1ea .first .tit .cue_nowpage {font-weight:600;}
+.bb-board_lists .list1ea .first .cue_nowpage_arrow {margin:0 4px 0 0; color:#e71737;}
+.bb-board_lists .list1ea .first .badge_talktalk,
+.bb-board_lists .list1ea .first .badge_malhagi {display:inline-block; position:relative; top:-1px; width:52px; height:24px; margin:0 33px 0 -5px; -webkit-border-radius:3px; border-radius:3px; font-size:14px; font-weight:600; color:#fff; line-height:23px; text-align:center;}
+.bb-board_lists .list1ea .first .badge_talktalk {background-color:#81b31c;}
+.bb-board_lists .list1ea .first .badge_malhagi {background-color:#3e92d2;}
+.bb-board_lists .list1ea .first .re {margin:0 0 0 3px; font-size:14px; color:#3366ff;}
+.bb-board_lists .list1ea .opened-num,
+.bb-board_lists .list1ea .like,
+.bb-board_lists .list1ea .name,
+.bb-board_lists .list1ea .date {display:inline-block; position:absolute; top:20px; left:100%; height:20px; border-left:1px solid #ebebeb; font-size:13.5px; line-height:20px; text-align:center;}
+.bb-board_lists .list1ea .opened-num {margin:0 0 0 -83px; width:83px; color:#6b6b6b;}
+.bb-board_lists .list1ea .like {width:83px; margin:0 0 0 -166px; color:#ff6d12;}
+.bb-board_lists .list1ea .name {overflow:hidden; width:87px; margin:0 0 0 -275px; padding:0 11px; color:#6b6b6b; white-space:nowrap; text-overflow:ellipsis;}
+.bb-board_lists .list1ea .date {width:83px; margin:0 0 0 -358px; color:#6b6b6b;}
+.bb-board_lists .nolist {position:relative; padding:68px 0 58px 0; border-bottom:1px solid #e0e0e0; text-align:center;}
+.bb-board_lists .nolist .sign_empty {display:inline-block; position:relative; width:67px; height:67px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/sign_empty.png') no-repeat; background-size:67px;}
+.bb-board_lists .nolist .t {display:block; margin:7px 0 0 0; font-size:15px; color:#737373;}
+/*----------------------------------*/
+
+/*--- 방부장게시판 하단 ---*/
+.bb-board_bottom {position:relative; height:auto; padding:28px 0;}
+.bb-board_bottom .pagetop {position:absolute; top:16px; right:11px; width:64px; height:26px; text-align:center; }
+.bb-board_bottom .pagetop .t {padding:0 2px 2px 0; font-size:13.5px; font-weight:600; color:#333; line-height:26px;}
+.bb-board_bottom .pagetop .arrow {display:inline-block; width:10px; height:6px; margin:0 4px 0 0; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/pagetop_arrow.png') no-repeat; background-size:10px 6px; vertical-align:middle;}
+.bb-board_bottom .pagetop:hover .t {border-bottom:1px solid #333;}
+/*-------------------------*/
+
+/*--- 방부장게시판 글쓰기버튼 ---*/
+.bb-board_head .btn_write,
+.bb-board_bottom .btn_write {position:absolute; z-index:10; left:16px; width:114px; height:31px; border:1px solid #999; -webkit-border-radius:3px; border-radius:3px; -webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,.14); box-shadow:0 1px 2px 0 rgba(0,0,0,.14); background-color:#fff;}
+.bb-board_head .btn_write {bottom:9px;}
+.bb-board_bottom .btn_write {top:9px;}
+.bb-board_head .btn_write .t,
+.bb-board_bottom .btn_write .t {position:absolute; left:49px; font-size:15px; color:#000; letter-spacing:; line-height:30px;}
+.bb-board_head .btn_write .ico,
+.bb-board_bottom .btn_write .ico {position:absolute; top:6px; left:21px; width:18px; height:18px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/ico_pencil.png') no-repeat; background-size:18px;}
+.bb-board_head .btn_write:active,
+.bb-board_bottom .btn_write:active {background-color:#f5f5f5; -webkit-box-shadow:0 1px 1px 0 rgba(0,0,0,.14); box-shadow:0 1px 1px 0 rgba(0,0,0,.14);}
+/*-------------------------------*/
+
+/*--- 방부장게시판 페이징 ---*/
+.board_paging {position:relative; top:0; font-size:13px; color:#6b6b6b; text-align:center;}
+.board_paging.padding1 {padding:24px 0 15px 0;}
+.board_paging .num {margin:0 12px; padding:0 4px; font-weight:600;}
+.board_paging .num.on {color:#0090e8;}
+.board_paging .prev,
+.board_paging .next {margin:0 8px; padding:0 3px;}
+.board_paging .prev .arrow,
+.board_paging .next .arrow {display:inline-block; width:6px; height:7px; background-size:6px 7px; vertical-align:middle;}
+.board_paging .prev .arrow {margin:0 4px 0 0; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/paging_prev_arrow.png') no-repeat;}
+.board_paging .next .arrow {margin:0 0 0 4px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/paging_next_arrow.png') no-repeat;}
+.board_paging .num:hover,
+.board_paging .prev:hover,
+.board_paging .next:hover {border-bottom:1px solid #6b6b6b; cursor:pointer;}
+.board_paging .num.on:hover {border-bottom:none; cursor:default;}
+.board_paging .line {display:inline-block; width:1px; height:11px; background-color:#ddd; vertical-align:middle;}
+/*---------------------------*/
+
+/*--- 방부장게시판 검색상자 ---*/
+.board_find_bar {position:relative; width:460px; height:46px;}
+.board_find_bar.margin1 {margin:20px auto 0 auto;}
+.board_find_bar .words-in {position:relative; top:6px; height:34px; margin:0 87px 0 27px; box-sizing:border-box; border:1px solid #c7c7c7; -webkit-border-radius:3px; border-radius:3px; -webkit-box-shadow:0 2px 3px rgba(0,0,0,.1) inset; box-shadow:0 2px 3px rgba(0,0,0,.1) inset; background-color:#fff;}
+.board_find_bar .words-in .box {position:relative; width:100%; height:32px; padding:0 7px 0 85px; box-sizing:border-box; border:none; outline:none; background:none; font-size:14.5px; color:#1c1e1f; line-height:32px;}
+.board_find_bar .words-in .box::-webkit-input-placeholder {color:#808080;}
+.board_find_bar .words-in .box:-moz-placeholder {color:#808080;}
+.board_find_bar .words-in .box::-moz-placeholder {color:#808080;}
+.board_find_bar .words-in .box:-ms-input-placeholder {color:#808080;}
+.board_find_bar .slct-in {position:absolute; z-index:10; top:6px; left:9px; width:98px; height:34px; box-sizing:border-box; border:1px solid #c7c7c7; -webkit-border-radius:3px 0 0 3px; border-radius:3px 0 0 3px;}
+.board_find_bar .slct-in .slct {position:relative; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; appearance:none; width:100%; height:32px; padding:0 19px 0 11px; box-sizing:border-box; border:none; -webkit-border-radius:2px 0 0 2px; border-radius:2px 0 0 2px; outline:none; background:#fff url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/slct_arrow.png') no-repeat; background-size:10px 6px; background-position:90% 13px; font-size:13.5px; color:#454545; line-height:33px;}
+.board_find_bar .find {display:inline-block; position:absolute; z-index:10; top:6px; right:9px; width:70px; height:32px; border:1px solid #999; -webkit-border-radius:3px; border-radius:3px; -webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,.14); box-shadow:0 1px 2px 0 rgba(0,0,0,.14); background-color:#fff;}
+.board_find_bar .find .ico {display:inline-block; position:absolute; top:5px; left:9px; width:21px; height:22px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/ico_find.png') no-repeat; background-size:21px 22px;}
+.board_find_bar .find .t {display:inline-block; position:absolute; margin:0 0 0 31px; font-size:14.5px; color:#303030; text-align:center; line-height:32px;}
+.board_find_bar .find:active {-webkit-box-shadow:0 0 1px 0 rgba(0,0,0,.14); box-shadow:0 0 1px 0 rgba(0,0,0,.14); background-color:#f5f5f5;}
+/*-----------------------------*/
+
+/*--- 방부장게시판 게시글 상단 ---*/
+.bb-board_page_top {position:relative; height:auto; padding:0 0 12px 0; border-top:1px solid #d6d6d6; border-right:1px solid #d6d6d6; border-left:1px solid #d6d6d6; background-color:#f7f7f7;}
+.bb-board_page_top .tit {position:relative; margin:0 30px; padding:23px 0 17px 0; font-size:19px; font-weight:600; line-height:28px;}
+.bb-board_page_top .tit.c_1c1e1f {color:#1c1e1f;}
+.bb-board_page_top .tit.c_2b6bc4 {color:#2b6bc4;}
+.bb-board_page_top .tit.c_7435d4 {color:#7435d4;}
+.bb-board_page_top .tit.c_9b22c7 {color:#9b22c7;}
+.bb-board_page_top .tit.c_ad3197 {color:#ad3197;}
+.bb-board_page_top .tit.c_974659 {color:#974659;}
+.bb-board_page_top .tit.c_c7562a {color:#c7562a;}
+.bb-board_page_top .tit.c_a88114 {color:#a88114;}
+.bb-board_page_top .tit.c_60871c {color:#60871c;}
+.bb-board_page_top .tit.c_257a4d {color:#257a4d;}
+.bb-board_page_top .tit.c_09737d {color:#09737d;}
+.bb-board_page_top .ctgr,
+.bb-board_page_top .writtenby {position:relative; margin:0 33px; font-size:16px; color:#7a7a7a; line-height:27px;}
+.bb-board_page_top .ctgr .t,
+.bb-board_page_top .writtenby .t {position:absolute; left:87px;}
+.bb-board_page_top .ctgr .t {color:#5878b3;}
+.bb-board_page_top .writtenby .t {color:#303030;}
+.bb-board_page_top .dot {display:inline-block; position:relative; width:4px; height:4px; margin:-2px 7px 0 0; -webkit-border-radius:3px; border-radius:3px; background-color:#60c8fb; vertical-align:middle;}
+.bb-board_page_top .nums {position:absolute; right:42px; width:auto; bottom:17px; text-align:right;}
+.bb-board_page_top .nums .opened-num,
+.bb-board_page_top .nums .like,
+.bb-board_page_top .nums .date {display:inline-block; position:relative;}
+.bb-board_page_top .nums .opened-num {margin:0 36px 0 0; font-size:15px; color:#383838;}
+.bb-board_page_top .nums .opened-num .n {margin:0 0 0 10px; font-weight:700; color:#383838;}
+.bb-board_page_top .nums .like {margin:0 53px 0 0; font-size:15px; color:#383838;}
+.bb-board_page_top .nums .like .n {margin:0 0 0 10px; font-weight:700; color:#ff6d12;}
+.bb-board_page_top .nums .date {font-size:14px; color:#909090;}
+.bb-board_page_top .nums .date .siboon {margin:0 0 0 4px;}
+/*--------------------------------*/
+
+/*--- 방부장게시판 게시글 본문 ---*/
+.bb-board_page_cont {position:relative; height:auto; padding:16px 0; border-right:1px solid #d6d6d6; border-left:1px solid #d6d6d6; background-color:#fff;}
+.bb-board_page_cont .cont {position:relative; margin:0 52px; font-size:15.5px; line-height:27px; white-space:pre-wrap; word-break:break-all;}
+.bb-board_page_cont .cont.c_1c1e1f {color:#1c1e1f;}
+.bb-board_page_cont .cont.c_2b6bc4 {color:#2b6bc4;}
+.bb-board_page_cont .cont.c_7435d4 {color:#7435d4;}
+.bb-board_page_cont .cont.c_9b22c7 {color:#9b22c7;}
+.bb-board_page_cont .cont.c_ad3197 {color:#ad3197;}
+.bb-board_page_cont .cont.c_974659 {color:#974659;}
+.bb-board_page_cont .cont.c_c7562a {color:#c7562a;}
+.bb-board_page_cont .cont.c_a88114 {color:#a88114;}
+.bb-board_page_cont .cont.c_60871c {color:#60871c;}
+.bb-board_page_cont .cont.c_257a4d {color:#257a4d;}
+.bb-board_page_cont .cont.c_09737d {color:#09737d;}
+.bb-board_page_cont .cont img {display:block; width:720px; margin:4px 0 12px 0;}
+.bb-board_page_cont .cont img.landscape {width:720px;}
+.bb-board_page_cont .cont img.portrait {width:580px;}
+.bb-board_page_cont .cont .like {position:relative; height:149px; margin:8px 0 5px 0;}
+.bb-board_page_cont .cont .like .press {position:relative; top:10px; left:50%; width:100px; height:129px; margin:0 0 0 -50px;}
+.bb-board_page_cont .cont .like .press .circle {display:block; position:absolute; top:6px; left:50%; width:84px; height:84px; margin:0 0 0 -42px; border:1px solid #a1a1a1; -webkit-border-radius:44px; border-radius:44px; -webkit-box-shadow:0 2px 7px rgba(0,0,0,.15); box-shadow:0 2px 7px rgba(0,0,0,.15); background:#fff url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/ico_like_n.png') no-repeat; background-size:cover;}
+.bb-board_page_cont .cont .like .press.on .circle {border:1px solid #ff6d12; -webkit-box-shadow:none; box-shadow:none; background:#ff6d12 url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/ico_like_p.png') no-repeat; background-size:cover;}
+.bb-board_page_cont .cont .like .press .t {display:block; position:absolute; bottom:0; width:100%; font-size:23.5px; font-weight:700; color:#4c4c4c; text-align:center; letter-spacing:-1px;}
+.bb-board_page_cont .cont .like .press.on .t {color:#222;}
+.bb-board_page_cont .modi-or-del {position:absolute; left:100%; bottom:0; height:42px; margin:0 0 21px 0; background:#999;}
+.bb-board_page_cont .modi-or-del .m,
+.bb-board_page_cont .modi-or-del .d {position:absolute; top:0; width:102px; height:34px; border:1px solid #b3b3b3; -webkit-border-radius:18px; border-radius:18px; background-color:#fff; background-image:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#f5f5f5));background-image:-moz-linear-gradient(top,#fff,#f5f5f5);background-image:-o-linear-gradient(top,#fff,#f5f5f5);background-image:linear-gradient(to bottom,#fff,#f5f5f5); font-size:16px; color:#222; text-align:center; line-height:34px;}
+.bb-board_page_cont .modi-or-del .m {margin:0 0 0 -281px;}
+.bb-board_page_cont .modi-or-del .d {margin:0 0 0 -156px;}
+.bb-board_page_cont .modi-or-del .m:active,
+.bb-board_page_cont .modi-or-del .d:active {border:1px solid #a6a6a6; background:#f0f0f0;}
+/*--------------------------------*/
+
+/*--- 방부장게시판 게시글 댓글란 ---*/
+.board_page_feedbacks {position:relative; padding:0 0 50px 0; border-right:1px solid #d6d6d6; border-left:1px solid #d6d6d6; background-color:#fff;}
+.board_page_feedbacks .top {position:relative; margin:0 40px; border-top:1px solid #ebebeb;}
+.board_page_feedbacks .top .tit {height:29px; margin:11px 16px 0 16px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/ico_reply.png') no-repeat top left; background-size:30px 29px;}
+.board_page_feedbacks .top .tit .t {margin:0 0 0 40px; font-size:19px; font-weight:800; color:#111; line-height:31px;}
+.board_page_feedbacks .top .tit .t .num {margin:0 0 0 7px; color:#3366ff;}
+.board_page_feedbacks .log_area {position:relative; height:auto; margin:12px 53px 0 53px;}
+.board_page_feedbacks .log_area .members,
+.board_page_feedbacks .log_area .bangsiris {position:relative; height:auto; padding:7px 0 9px 0; border-bottom:1px solid #d6e6ff;}
+.board_page_feedbacks .log_area .bangsiris {margin:-1px 0 0 0; border-top:1px solid #d6e6ff; background-color:#f3f8ff;}
+.board_page_feedbacks .log_area .members .name,
+.board_page_feedbacks .log_area .bangsiris .name {display:inline-block; margin:0 0 0 16px; padding:4px 5px; font-size:15px; font-weight:600; vertical-align:top; white-space:nowrap;}
+.board_page_feedbacks .log_area .members .name {color:#333;}
+.board_page_feedbacks .log_area .bangsiris .name {-webkit-border-radius:6px; border-radius:6px; background-color:#0483d3; color:#fff;}
+.board_page_feedbacks .log_area .members .msgs,
+.board_page_feedbacks .log_area .bangsiris .msgs {display:block; height:auto; margin: 2px 152px 0 23px; font-size:15px; line-height:22px; white-space:pre-wrap; word-break:break-all;}
+.board_page_feedbacks .log_area .members .msgs {color:#222;}
+.board_page_feedbacks .log_area .bangsiris .msgs {color:#333;}
+.board_page_feedbacks .log_area .members .date,
+.board_page_feedbacks .log_area .bangsiris .date {display:inline-block; position:absolute; top:10px; right:23px; padding:0 0 3px 4px; vertical-align:bottom; font-size:13.5px; color:#999;}
+.board_page_feedbacks .log_area .del {position:absolute; top:6px; right:88px; width:48px; height:24px; border:1px solid #bababa; outline:none; -webkit-border-radius:13px; border-radius:13px; background-color:#fff; font-weight:600; font-size:14.5px;  color:#a6a6a6; text-align:center; line-height:22px; vertical-align:bottom;}
+.board_page_feedbacks .writing_area {position:relative;}
+.board_page_feedbacks .writing_area .box {position:relative; height:110px; margin:24px 191px 0 62px; box-sizing:border-box; border:2px solid #579efa;}
+.board_page_feedbacks .writing_area .box .message-in {position:relative; top:9px; width:100%; height:90px; padding:0 12px; box-sizing:border-box; border:none; background:none; outline:none; resize:none; font-size:15px; color:#222; line-height:22px; letter-spacing:-0.5px;}
+.board_page_feedbacks .writing_area .counting {position:absolute; bottom:64px; right:74px; font-size:16px; font-weight:600; color:#666; letter-spacing:-0.3px;}
+.board_page_feedbacks .writing_area .counting .num {color:#1194e3;}
+.board_page_feedbacks .writing_area .send {position:absolute; z-index:50; right:65px; bottom:1px; width:110px; height:40px; border:none; outline:none; border-bottom:2px solid #3783e5; -webkit-border-radius:4px; border-radius:4px; background-color:#3a8af2; font-size:17px; font-weight:600; color:#fff; text-align:center; line-height:39px; letter-spacing:0;}
+.board_page_feedbacks .writing_area .send:active {border-bottom:2px solid #347bd9; background-color:#347bd9;}
+.board_page_feedbacks ::-webkit-input-placeholder,
+.board_page_feedbacks :-moz-placeholder,
+.board_page_feedbacks ::-moz-placeholder,
+.board_page_feedbacks :-ms-input-placeholder,
+.board_page_feedbacks :-firefox-input-placeholder {color:#666;}
+.board_page_feedbacks ::-webkit-scrollbar {width:8px;}
+.board_page_feedbacks ::-webkit-scrollbar-button:start:decrement,
+.board_page_feedbacks ::-webkit-scrollbar-button:end:increment {display:block; height:5px; background:none;}
+.board_page_feedbacks ::-webkit-scrollbar-track {-webkit-border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; border-radius:5px; -webkit-box-shadow:none; -moz-box-shadow:none; -ms-box-shadow:none; -o-box-shadow:none; box-shadow:none; background:none;}
+.board_page_feedbacks ::-webkit-scrollbar-thumb {height:8px; -webkit-border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; border-radius:5px; -webkit-box-shadow:none; -moz-box-shadow:none; -ms-box-shadow:none; -o-box-shadow:none; box-shadow:none; background:rgba(0,0,0,.2);}
+/*----------------------------------*/
+
+/*--- 방부장게시판 글쓰기 상단 ---*/
+.bb-board_editor_head {position:relative; height:auto; padding:22px 0; border-top:1px solid #d6d6d6; border-right:1px solid #d6d6d6; border-left:1px solid #d6d6d6; background-color:#fff;}
+.bb-board_editor_head .ctgr,
+.bb-board_editor_head .tit
+{position:relative; height:42px; margin:0 37px; line-height:42px;}
+.bb-board_editor_head .ctgr {padding:0 0 11px 0;}
+.bb-board_editor_head .ctgr .sectionname,
+.bb-board_editor_head .tit .sectionname {position:relative; margin:0 40px 0 0; font-size:17.5px; color:#7a7a7a;}
+.bb-board_editor_head .ctgr .rdo_1 {display:inline-block; position:absolute; clip:rect(0 0 0 0); height:24px; background-repeat:no-repeat; background-position:0 0; vertical-align:middle;}
+.bb-board_editor_head .ctgr .rdo {display:inline-block; height:24px; margin:0; padding:0 0 0 30px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/btn_radio.png'); background-size:24px 48px; background-repeat:no-repeat; background-position:0 -24px; font-size:17px; color:#5878b3; line-height:24px; letter-spacing:-1px;}
+.bb-board_editor_head .ctgr .rdo_1:checked + .rdo {background-position:0 0;}
+.bb-board_editor_head .ctgr .ctgr_choice {display:inline; position:relative;}
+.bb-board_editor_head .ctgr .ctgr_choice.margin1 {margin:0 36px 0 0;}
+.bb-board_editor_head .tit .box_wrap {position:absolute; top:-2px; width:100%; padding:0 3px 0 66px; box-sizing:border-box;}
+.bb-board_editor_head .tit .box_wrap .box {position:relative; width:100%; height:42px; padding:0 12px; box-sizing:border-box; border:1px solid #c4c4c4; -webkit-border-radius:4px; border-radius:4px; -webkit-box-shadow:0 2px 3px rgba(0,0,0,.1) inset; box-shadow:0 2px 3px rgba(0,0,0,.1) inset; outline:none; background-color:#fff; font-size:16.5px; line-height:42px; letter-spacing:-0.5px;}
+.bb-board_editor_head .tit .box_wrap .box.c_1c1e1f {color:#1c1e1f;}
+.bb-board_editor_head .tit .box_wrap .box.c_2b6bc4 {color:#2b6bc4;}
+.bb-board_editor_head .tit .box_wrap .box.c_7435d4 {color:#7435d4;}
+.bb-board_editor_head .tit .box_wrap .box.c_9b22c7 {color:#9b22c7;}
+.bb-board_editor_head .tit .box_wrap .box.c_ad3197 {color:#ad3197;}
+.bb-board_editor_head .tit .box_wrap .box.c_974659 {color:#974659;}
+.bb-board_editor_head .tit .box_wrap .box.c_c7562a {color:#c7562a;}
+.bb-board_editor_head .tit .box_wrap .box.c_a88114 {color:#a88114;}
+.bb-board_editor_head .tit .box_wrap .box.c_60871c {color:#60871c;}
+.bb-board_editor_head .tit .box_wrap .box.c_257a4d {color:#257a4d;}
+.bb-board_editor_head .tit .box_wrap .box.c_09737d {color:#09737d;}
+/*--------------------------------*/
+
+/*--- 방부장게시판 글쓰기 컬러피커 ---*/
+.bb-board_editor_colorpick {position:relative; margin:0 115px;}
+.bb-board_editor_colorpick.padding1 {padding:8px 0 0 0;}
+.bb-board_editor_colorpick .option {position:relative; width:100%; height:25px;}
+.bb-board_editor_colorpick .option p {display:inline;}
+.bb-board_editor_colorpick .option .ico_ink {position:absolute; left:50%; width:25px; height:25px; margin:0 0 0 -421px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt_ico_ink.png') no-repeat;background-size:cover;}
+.bb-board_editor_colorpick .option .color00,
+.bb-board_editor_colorpick .option .color01,
+.bb-board_editor_colorpick .option .color02,
+.bb-board_editor_colorpick .option .color03,
+.bb-board_editor_colorpick .option .color04,
+.bb-board_editor_colorpick .option .color05,
+.bb-board_editor_colorpick .option .color06,
+.bb-board_editor_colorpick .option .color07,
+.bb-board_editor_colorpick .option .color08,
+.bb-board_editor_colorpick .option .color09,
+.bb-board_editor_colorpick .option .color10
+{position:absolute; width:19px; height:19px; margin:5px 0 0 0;}
+.bb-board_editor_colorpick .option .color00
+{left:50%;margin-left:-386px;}
+.bb-board_editor_colorpick .option .color01
+{left:50%;margin-left:-353px;}
+.bb-board_editor_colorpick .option .color02
+{left:50%;margin-left:-320px;}
+.bb-board_editor_colorpick .option .color03
+{left:50%;margin-left:-287px;}
+.bb-board_editor_colorpick .option .color04
+{left:50%;margin-left:-254px;}
+.bb-board_editor_colorpick .option .color05
+{left:50%;margin-left:-221px;}
+.bb-board_editor_colorpick .option .color06
+{left:50%;margin-left:-188px;}
+.bb-board_editor_colorpick .option .color07
+{left:50%;margin-left:-155px;}
+.bb-board_editor_colorpick .option .color08
+{left:50%;margin-left:-122px;}
+.bb-board_editor_colorpick .option .color09
+{left:50%;margin-left:-89px;}
+.bb-board_editor_colorpick .option .color10
+{left:50%;margin-left:-56px;}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color00,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color01,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color02,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color03,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color04,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color05,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color06,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color07,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color08,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color09,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color10
+{position:absolute; opacity:0;}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color00:checked + label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color01:checked + label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color02:checked + label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color03:checked + label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color04:checked + label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color05:checked + label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color06:checked + label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color07:checked + label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color08:checked + label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color09:checked + label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color10:checked + label
+{display:block; background-repeat:no-repeat; background-position:left top; background-size:19px;}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color00:checked + label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color00_checked.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color01:checked + label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color01_checked.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color02:checked + label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color02_checked.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color03:checked + label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color03_checked.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color04:checked + label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color04_checked.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color05:checked + label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color05_checked.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color06:checked + label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color06_checked.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color07:checked + label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color07_checked.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color08:checked + label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color08_checked.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color09:checked + label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color09_checked.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color10:checked + label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color10_checked.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color00 +label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color01 +label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color02 +label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color03 +label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color04 +label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color05 +label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color06 +label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color07 +label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color08 +label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color09 +label,
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color10 +label
+{display:block; width:100%; height:19px; margin:0; background-repeat:no-repeat; background-position:left top; background-size:19px;}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color00 +label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color00.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color01 +label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color01.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color02 +label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color02.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color03 +label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color03.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color04 +label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color04.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color05 +label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color05.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color06 +label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color06.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color07 +label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color07.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color08 +label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color08.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color09 +label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color09.png');}
+.bb-board_editor_colorpick .option input[type="radio"].choice-at-color10 +label
+{background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/opt-color10.png');}
+/*------------------------------------*/
+
+/*--- 방부장게시판 글쓰기 본문 ---*/
+.bb-board_editor_cont {position:relative; height:auto; border-top:2px solid #d6d6d6; border-right:1px solid #d6d6d6; border-left:1px solid #d6d6d6; background-color:#f7f7f7;}
+.bb-board_editor_cont .attach {position:relative; width:820px; height:53px; margin:0 38px; /*background:#fff;*/}
+
+.bb-board_editor_cont .attach .photo,
+.bb-board_editor_cont .attach .video {display:inline-block; position:absolute; top:9px; height:32px; border:1px solid #bfbfbf; -webkit-border-radius:3px; border-radius:3px; -webkit-box-shadow:0 1px 1px 0 rgba(0,0,0,.14); box-shadow:0 1px 1px 0 rgba(0,0,0,.14); background-color:#fff; background-repeat:no-repeat; background-position:12px 5px; background-size:27px 22px;}
+.bb-board_editor_cont .attach .photo:active,
+.bb-board_editor_cont .attach .video:active {-webkit-box-shadow:0 1px 0 0 rgba(0,0,0,.1); box-shadow:0 1px 0 0 rgba(0,0,0,.1); background-color:#f7f7f7;}
+.bb-board_editor_cont .attach .photo {width:96px; background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/ico_photo.png');}
+.bb-board_editor_cont .attach .video {left:111px; width:104px; background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/ico_video.png');}
+.bb-board_editor_cont .attach .photo .t,
+.bb-board_editor_cont .attach .video .t {margin:0 0 0 47px; font-size:15px; color:#404040; line-height:31px; letter-spacing:-0.3px;}
+.bb-board_editor_cont .counting {position:absolute; top:9px; right:49px; width:160px; height:44px; font-size:15.5px; color:#000; text-align:right; line-height:44px; letter-spacing:-0.3px;}
+.bb-board_editor_cont .counting .num {font-weight:600; color:#1194e3;}
+.bb-board_editor_cont .cont {position:relative; overflow-x:hidden; overflow-y:auto; height:914px; margin:0 38px; padding:12px 13px; box-sizing:border-box; border:1px solid #d1d1d1; background-color:#fff; font-size:15.5px; line-height:27px; white-space:pre-wrap; word-break:break-all;}
+.bb-board_editor_cont .cont.c_1c1e1f {color:#1c1e1f;}
+.bb-board_editor_cont .cont.c_2b6bc4 {color:#2b6bc4;}
+.bb-board_editor_cont .cont.c_7435d4 {color:#7435d4;}
+.bb-board_editor_cont .cont.c_9b22c7 {color:#9b22c7;}
+.bb-board_editor_cont .cont.c_ad3197 {color:#ad3197;}
+.bb-board_editor_cont .cont.c_974659 {color:#974659;}
+.bb-board_editor_cont .cont.c_c7562a {color:#c7562a;}
+.bb-board_editor_cont .cont.c_a88114 {color:#a88114;}
+.bb-board_editor_cont .cont.c_60871c {color:#60871c;}
+.bb-board_editor_cont .cont.c_257a4d {color:#257a4d;}
+.bb-board_editor_cont .cont.c_09737d {color:#09737d;}
+.bb-board_editor_cont .cont img {display:block; width:720px; margin:4px 0 12px 0;}
+.bb-board_editor_cont .cont img.landscape {width:720px;}
+.bb-board_editor_cont .cont img.portrait {width:580px;}
+.bb-board_editor_cont ::-webkit-input-placeholder,
+.bb-board_editor_cont :-moz-placeholder,
+.bb-board_editor_cont ::-moz-placeholder,
+.bb-board_editor_cont :-ms-input-placeholder,
+.bb-board_editor_cont :-firefox-input-placeholder {color:#666;}
+.bb-board_editor_cont ::-webkit-scrollbar {width:8px;}
+.bb-board_editor_cont ::-webkit-scrollbar-button:start:decrement,
+.bb-board_editor_cont ::-webkit-scrollbar-button:end:increment {display:block; height:5px; background:none;}
+.bb-board_editor_cont ::-webkit-scrollbar-track {-webkit-border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; border-radius:5px; -webkit-box-shadow:none; -moz-box-shadow:none; -ms-box-shadow:none; -o-box-shadow:none; box-shadow:none; background:none;}
+.bb-board_editor_cont ::-webkit-scrollbar-thumb {height:8px; -webkit-border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px; border-radius:5px; -webkit-box-shadow:none; -moz-box-shadow:none; -ms-box-shadow:none; -o-box-shadow:none; box-shadow:none; background:rgba(0,0,0,.2);}
+.bb-board_editor_cont .allim {position:relative; height:92px; margin:0 38px;}
+.bb-board_editor_cont .allim .ico {display:inline-block; position:absolute; top:18px; left:5px; width:25px; height:25px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/ico_exclamation.png') no-repeat; background-size:cover;}
+.bb-board_editor_cont .allim .ment {position:absolute; top:22px; left:38px; font-size:13.5px; color:#4c4c4c; line-height:21px; white-space:pre-wrap;}
+/*--------------------------------*/
+
+/*--- 방부장게시판 글쓰기 등록/취소 ---*/
+.bb-board_editor_confirm {position:relative; padding:30px 0 32px 0; border-top:1px solid #e8e8e8; border-right:1px solid #d6d6d6; border-bottom:2px solid #d6d6d6; border-left:1px solid #d6d6d6; text-align:center;}
+.bb-board_editor_confirm .confirm,
+.bb-board_editor_confirm .cancel {display:inline-block; position:relative; height:42px; -webkit-border-radius:22px; border-radius:22px; font-size:17px; font-weight:600; color:#fff; line-height:41px; letter-spacing:0;}
+.bb-board_editor_confirm .confirm {width:174px; margin:0 11px 0 0; background-color:#0ca2ee;}
+.bb-board_editor_confirm .cancel {width:140px; margin:0 0 0 11px; background-color:#8b8b8b;}
+.bb-board_editor_confirm .confirm:active {background-color:#0b91d4;}
+.bb-board_editor_confirm .cancel:active {background-color:#808080;}
+/*-------------------------------------*/
+
+/*--- 방부장게시판 글쓰기 본문- 사진/동영상 첨부 ---*/
+.bb-board_editor_cont_attach {position:absolute; top:50%; left:50%; width:552px; height:233px; margin:-117px 0 0 -276px; -webkit-border-radius:8px; border-radius:8px; -webkit-box-shadow:0 3px 12px 0 rgba(0,0,0,.45); box-shadow:0 3px 12px 0 rgba(0,0,0,.45); background-color:#fff;}
+.bb-board_editor_cont_attach .tit {position:relative; top:23px; margin:0 0 0 32px; font-size:19.5px; font-weight:800; color:#3a8af2;}
+.bb-board_editor_cont_attach .url_guide {display:inline-block; position:absolute; top:63px; left:37px; font-size:14px; color:#666;}
+.bb-board_editor_cont_attach .url_guide .t2 {margin:0 4px 0 0; font-size:15.5px; color:#4c4c4c;}
+.bb-board_editor_cont_attach .urlbox_photo {position:absolute; top:92px; left:34px; width:482px; height:40px; border:1px solid #d1d1d1; background-color:#f2f2f2;}
+.bb-board_editor_cont_attach .urlbox_photo .t {display:inline-block; overflow:hidden; width:343px; height:40px; margin:0 0 0 12px; font-size:16px; color:#000; line-height:40px; word-break:break-all;}
+.bb-board_editor_cont_attach .urlbox_photo .find_file {display:inline-block; position:absolute; top:0; right:0; width:120px; height:42px; margin:-1px -1px 0 0; border:none; outline:none; background-color:#454545; font-size:15.5px; color:#fff; text-align:center; line-height:42px;}
+.bb-board_editor_cont_attach .urlbox_photo .find_file:active {background-color:#333; line-height:44px;}
+.bb-board_editor_cont_attach .urlbox_video {position:absolute; top:92px; left:34px; width:484px; height:42px; box-sizing:border-box; padding:0 10px; border:1px solid #666; background-color:#fff; font-size:16px; color:#000; line-height:42px;}
+.bb-board_editor_cont_attach .btns {position:absolute; bottom:0; width:100%; height:73px; padding:0 12px; box-sizing:border-box; border-top:1px solid #dbdbdb; -webkit-border-radius:0 0 8px 8px; border-radius:0 0 8px 8px; background:#f2f2f2;}
+.bb-board_editor_cont_attach .btns .confirm,
+.bb-board_editor_cont_attach .btns .cancel {display:inline-block; position:absolute; top:14px; left:50%; width:142px; height:39px; -webkit-border-radius:5px; border-radius:5px; font-size:17.5px; font-weight:600; color:#fff; text-align:center; line-height:41px; letter-spacing:0;}
+.bb-board_editor_cont_attach .btns .confirm {margin:0 0 0 -149px; border-bottom:3px solid #3783e5; background-color:#3a8af2;}
+.bb-board_editor_cont_attach .btns .cancel {margin:0 0 0 7px; border-bottom:3px solid #9e9e9e; background-color:#a5a5a5;}
+.bb-board_editor_cont_attach .btns .confirm:active {border-bottom:3px solid #347bd9; background-color:#347bd9;}
+.bb-board_editor_cont_attach .btns .cancel:active {border-bottom:3px solid #999; background-color:#999;}
+.bb-board_editor_cont_attach .x {display:inline-block; position:absolute; top:11px; right:12px; width:28px; height:28px; border:1px solid #c7c7c7; -webkit-border-radius:4px; border-radius:4px; background:#f4f4f4 url('http://image.bbjang.com/imgs/bbjang/img_pc/bb-board/pop_ico_x.png') no-repeat; background-size:cover; color:rgba(0,0,0,0);}
+/*--------------------------------------------*/

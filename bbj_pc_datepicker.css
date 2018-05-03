@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+.ui-datepicker {
+	width: 340px;
+    position:relative;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: 10px 0 14px 0;
+}
+.ui-datepicker .ui-datepicker-prev{
+	position: absolute;
+	top: 0px;
+    left:0;
+	width: 42px;
+	height: 42px;
+}
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 0px;
+    right:0;
+	width: 42px;
+	height: 42px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -5px;
+	top: 50%;
+	margin-top: -4px;
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 42px;
+	line-height: 28px;
+	text-align: center;
+    font-size:17px;
+}
+
+.ui-datepicker .ui-datepicker-title span {display:inline-block;}
+
+.ui-datepicker table {
+	width: 100%;
+	font-size:15px;
+	border-collapse: collapse;
+    margin-bottom:10px;
+}
+.ui-datepicker th {
+	padding:2px 3px;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker td {
+	border: 0;
+    padding:0;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: 12px 0;
+	text-decoration: none;
+    font-size:15px;
+    text-align:center;
+    box-sizing:border-box;
+}
+.ui-widget {
+	font-family:'나눔고딕','NanumGothic','맑은고딕','Malgun Gothic',"돋움",Dotum,'Apple SD Gothic Neo','sans-serif';
+	font-size: 1em;
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family:'나눔고딕','NanumGothic','맑은고딕','Malgun Gothic',"돋움",Dotum,'Apple SD Gothic Neo','sans-serif';
+	font-size: 1em;
+}
+.ui-widget-header {
+    border:none;
+	color: #141516;
+	font-weight: 600;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+/* We use html here because we need a greater specificity to make sure disabled
+works properly when clicked or hovered */
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    border:none;
+	background: #ffffff;
+	font-weight: normal;
+	color: #454545;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+    border:none;
+    background:none;
+	font-weight: normal;
+    border-radius:2px;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    border:none;
+	background: #0f81c7;
+	font-weight: normal;
+	color: #ffffff;
+    border-radius:2px
+}
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    border:none;
+	background: #e6e6e6;
+	color: #454545;
+    border-radius:2px;
+}
+.ui-icon {
+	width: 10px;
+	height: 16px;
+    text-indent:-9999px;
+}
+.ui-icon,
+.ui-widget-content .ui-icon {
+	background-image: url("http://image.bbjang.com/imgs/bbjang/js/date_button.png"); background-size:20px 17px;
+}
+.ui-widget-header .ui-icon {
+	background-image: url("http://image.bbjang.com/imgs/bbjang/js/date_button.png"); background-size:20px 17px;
+}
+.ui-icon-circle-triangle-e { background-position: -10px 0px; }
+.ui-icon-circle-triangle-w { background-position: 0 0; }
+.ui-corner-all{border-radius:0;}
+
+.ui-datepicker-calendar .ui-datepicker-week-end, .ui-datepicker-calendar td:first-child a, .ui-datepicker-calendar td:last-child a{color: #ff4a4a;}

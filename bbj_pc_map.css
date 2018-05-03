@@ -1,0 +1,170 @@
+/* 타지역 상권분석 지도 */
+.map{position:relative; width:100%; height:600px; left:0; right:0; bottom:0; top:45px;}
+.fltr_map{position:relative; width:100%; height:auto; background:#fff; overflow:auto; border-bottom:1px solid #c1c1c1; top:45px; left:0;}
+.fltr_map li{float:left; width:25%; height:auto; border-right:1px solid #e1e1e1; box-sizing:border-box;}
+.fltr_map .css2{width:33.33%;}
+.fltr_map li.css3 {border-right:0;}
+.fltr_map .fltr_region a{display:block; width:100%; height:auto; padding:10px 20% 10px 10%; box-sizing:border-box; background:url("http://image.bbjang.com/imgs/bbjang/img_map/bullet_slct.png") no-repeat 90% center; background-size:10px 7px; font-size:14px; font-weight:700; color:#384955;}
+.fltr_map .fltr_region a:active{background-color:rgba(0,0,0,0.03);}
+.fltr_map .fltr_region a span{display:-webkit-box; overflow:hidden; text-overflow:ellipsis; -webkit-box-orient:vertical; -webkit-line-clamp:1;}
+
+/* 유동인구 측정지점 위치보기- 주소레이어 */
+.ydingu_minilayer {display:block; position:relative; z-index:10; width:100%; height:28px; margin:-90px 0 0 0; text-align:center;}
+.ydingu_minilayer .addr {display:inline-block; position:relative; overflow:hidden; width:auto; height:28px; padding:0 7px; -webkit-border-radius:3px; border-radius:3px; background-color:#003e94; font-size:13.5px; color:#fff; line-height:28px; text-align:center; letter-spacing:-0.3px;}
+.ydingu_minilayer .x {position:relative; z-index:30; right:0; width:18px; height:28px; margin:0 0 0 6px; border:none; outline:0; background:url('http://image.bbjang.com/imgs/bbjang/img_map/place/pl_pin_mnlyr_x.png') no-repeat center; background-size:18px 18px; color:rgba(0,0,0,0);}
+
+/* 지도위 검색바 */
+.box_srch_2 {position:fixed; z-index:10; top:86px; width:750px; padding:0 254px 0 10px; box-sizing:border-box;}
+.box_srch_2 .srch_adrs_2 {position:relative; top:5px; width:100%; height:auto; padding:10px 68px 9px 14px; -webkit-border-radius:18px; border-radius:18px; box-shadow:0 1px 4px rgba(8,107,156,1) inset; background-color:rgba(10,137,200,1); box-sizing:border-box;}
+.box_srch_2 .srch_adrs_2 input {position:relative; width:100%; height:auto; background:none; border:none; font-size:15px; line-height:15px; letter-spacing:-0.5px; font-weight:700; color:#fff; outline:none; appearance:none; -webkit-appearance:none;}
+.box_srch_2 .srch_adrs_2 input::-webkit-input-placeholder {color:#fff; font-weight:normal; line-height:16px; letter-spacing:-0.5px;}
+.box_srch_2 .btn_srch_2 {position:absolute; width:41px; height:36px; top:0; right:0;}
+.box_srch_2 .btn_srch_2 a {display:block; width:100%; height:100%; background:url("http://image.bbjang.com/imgs/bbjang/img_map/btn_srch_loca.png") no-repeat 33% center; background-size:22px 20px;}
+.box_srch_2 .btn_srch_2 a:active {-webkit-border-radius:0 18px 18px 0; border-radius:0 18px 18px 0; background-color:rgba(0,0,0,0.07);}
+.box_srch_2 .btn_erase_2 {position:absolute; width:24px; height:36px; top:0; right:42px;}
+.box_srch_2 .btn_erase_2 a {display:block; width:100%; height:100%; background:url("http://image.bbjang.com/imgs/bbjang/img_map/btn_txt_erase.png") no-repeat center center; background-size:11px 11px;}
+.box_srch_2 .btn_erase_2 a:active {background-color:rgba(0,0,0,0.07);}
+
+/* 반경 세팅 */
+.bounds_sett {position:relative; top:45px; overflow:hidden; width:750px; height:48px; background-color:rgba(255,255,255,1);}/*180220 shadow 삭제*/
+.bounds_sett .lb {display:inline-block; position:absolute; top:0; left:20px; width:121px; height:48px; font-size:15.5px; color:#384955; font-weight:600; line-height:48px; text-indent:10px; letter-spacing:-1px; white-space:nowrap;}
+.bounds_sett .slct_area {display:inline-block; position:absolute; top:0; left:142px; width:137px; height:48px;}
+.bounds_sett .line {display:inline-block; position:absolute; top:50%; width:1px; height:20px; margin:-10px 0 0 0; background-color:#d9d9d9;}
+.bounds_sett .line.l {left:141px;}
+.bounds_sett .line.r {left:279px;}
+.bounds_sett .slct_area .slct {width:100%; height:100%; padding:0 0 0 9px; border:none; outline:none; background:#fff url('http://image.bbjang.com/imgs/bbjang/img_map/place/slct_arrow_blue.png') no-repeat 88%; background-size:12px 8px; font-size:16px; color:#0069bf; font-weight:600; letter-spacing:0;}
+.bounds_sett .confirm {position:absolute; top:50%; right:18px; width:118px; height:36px; margin:-18px 0 0 0; -webkit-border-radius:18px; border-radius:18px; background-color:#0072cf; font-size:15.5px; color:#fff; line-height:36px; text-align:center; font-weight:600;}
+.bounds_sett .confirm:active {background-color:#0064b5;}
+
+/* 장소주소 검색결과 레이어창 (180214 정우아 수정)*/
+.search_list{position:absolute; width:50%; height:auto; top:45px; left:0; z-index:400;}
+.wrap_srch_lst{display:none; position:relative; width:100%; height:auto; overflow:auto; background:#fff; box-sizing:border-box;}
+.wrap_srch_lst .srch_top{position:relative; width:100%; height:40px; line-height:40px; background:#fff; border-bottom:2px solid #85d0f6; padding-left:18px; font-size:15px; font-weight:700; color:#61b2db; box-sizing:border-box;}
+.wrap_srch_lst .srch_cls{position:absolute; width:50px; height:38px; top:0; right:0;}
+.wrap_srch_lst .srch_cls a{display:block; width:100%; height:100%; background:url("http://image.bbjang.com/imgs/bbjang/img_map/btn_srch_lst_dlt.png") no-repeat center 11px; background-size:15px 15px;}
+.wrap_srch_lst .srch_cls a:active{background-color:rgba(0,0,0,0.03);}
+
+/* 리스트 */
+.wrap_srch_lst .srch_content{position:relative; width:100%; max-height:280px; overflow-y:scroll;} /*(180214 정우아 수정)*/
+.wrap_srch_lst .srch_content .srch_list1{position:relative; width:100%; height:auto;}
+.wrap_srch_lst .srch_content li{float:left; position:relative; width:100%; padding:12px 70px 11px 18px; border-bottom:1px solid #d8deea; box-sizing:border-box; cursor:pointer;}
+.wrap_srch_lst .srch_content li:active{background:rgba(0,0,0,0.03);}
+.wrap_srch_lst .srch_content li .main_loca{display:block; font-size:16px; font-weight:700; color:#384955; line-height:16px;}
+.wrap_srch_lst .srch_content li .sub_loca{display:block; padding-top:8px; font-size:14px; font-weight:400; color:#616161; line-height:14px;}
+.wrap_srch_lst .srch_content li .srch_color{color:#0ca2ed;}
+.wrap_srch_lst .srch_content li .btn_lst_slct{position:absolute; width:48px; height:auto; top:50%; right:18px; margin-top:-16px}
+.wrap_srch_lst .srch_content li .btn_lst_slct a{display:block; width:100%; height:100%; background:#fff; border:1px solid #0ca2ed; box-sizing:border-box; border-radius:3px; font-size:14px; color:#0ca2ed; line-height:30px; text-align:center;}
+.wrap_srch_lst .srch_content li .btn_lst_slct a:active{position:relative; top:1px;}
+
+/* 하단 결과더보기 버튼 */
+.wrap_srch_lst .srch_more_btn{position:relative; width:100%; text-align:center;}
+.wrap_srch_lst .srch_more_btn a{display:block; width:100%; height:auto; padding:13px 0; font-size:14px; color:#fff; line-height:14px;}
+.wrap_srch_lst .srch_lst_more a{background:#b2b8bb;}
+.wrap_srch_lst .srch_lst_more a:active{background:#a5acaf;}
+.wrap_srch_lst .more_disable{background:#cacaca;}
+
+
+
+
+/*--- 매물 상세뷰- 주소/위치- 지도 확대,축소 버튼 ---*/
+.view_map_scale {position:absolute; z-index:50; top:8px; right:9px; width:22px; height:43px; padding:8px 0 0 0;}
+.view_map_scale .plus {position:absolute; top:8px; left:0; width:22px; height:21px;}
+.view_map_scale .plus .ico {position:relative; top:0; left:0; width:22px; height:21px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/view_btn_scale_plus.png') no-repeat 0 0; background-size:cover; font-size:11px; color:rgba(0,0,0,0); line-height:21px; text-align:center;}
+.view_map_scale .line {position:absolute; top:29px; left:0; width:22px; height:1px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/view_btn_scale_line.png') no-repeat 0 0; background-size:cover;}
+.view_map_scale .minus {position:absolute; top:30px; left:0; width:22px; height:21px;}
+.view_map_scale .minus .ico {position:relative; top:0; left:0; width:22px; height:21px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/view_btn_scale_minus.png') no-repeat 0 0; background-size:cover; font-size:11px; color:rgba(0,0,0,0); line-height:21px; text-align:center;}
+/*------------------------------------------*/
+
+/*--- 매물 상세뷰- 주소/위치- 주변시설,지적도 켬/끔 버튼 ---*/
+.view_map_alpha {position:absolute; z-index:50; top:8px; right:38px; width:130px; height:36px; padding:8px 0 0 0;}
+.view_map_alpha .surround {position:absolute; top:9px; right:56px; width:59px; height:30px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/view_btn_surround.png') no-repeat 0 0; background-size:cover; font-size:13px; color:rgba(0,0,0,0); line-height:30px; text-align:center;}
+.view_map_alpha .surround.on {background:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/view_btn_surround_on.png') no-repeat 0 0;}
+.view_map_alpha .land {position:absolute; top:9px; right:0; width:52px; height:30px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/view_btn_land.png') no-repeat 0 0; background-size:cover; font-size:13px; color:rgba(0,0,0,0); line-height:30px; text-align:center;}
+.view_map_alpha .land.on {background:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/view_btn_land_on.png') no-repeat 0 0;}
+/*------------------------------------------------*/
+
+/*--- 매물 상세뷰- 주소/위치- 주변시설 켬- 장소 선택 ---*/
+.surround_place_choice {position:absolute; z-index:50; top:99px; right:0; width:190px; height:457px;}
+.surround_place_choice .a {top:0; right:9px;}
+.surround_place_choice .b {top:37px; right:9px;}
+.surround_place_choice .c {top:74px; right:9px;}
+.surround_place_choice .d {top:111px; right:9px;}
+.surround_place_choice .e {top:148px; right:9px;}
+.surround_place_choice .f {top:185px; right:9px;}
+.surround_place_choice .g {top:222px; right:9px;}
+.surround_place_choice .g_2 {top:222px; right:94px;}
+.surround_place_choice .h {top:259px; right:9px;}
+.surround_place_choice .h_2 {top:259px; right:94px;}
+.surround_place_choice .i {top:296px; right:9px;}
+.surround_place_choice .i_2 {top:296px; right:94px;}
+.surround_place_choice .j {top:333px; right:9px;}
+.surround_place_choice .j_2 {top:333px; right:94px;}
+.surround_place_choice .k {top:370px; right:9px;}
+.surround_place_choice .k_2 {top:370px; right:94px;}
+.surround_place_choice .l {top:407px; right:9px;}
+.surround_place_choice .l_2 {top:407px; right:94px;}
+.surround_place_choice .pl17,
+.surround_place_choice .pl18,
+.surround_place_choice .pl09,
+.surround_place_choice .pl08,
+.surround_place_choice .pl04,
+.surround_place_choice .pl03,
+.surround_place_choice .pl05,
+.surround_place_choice .pl12,
+.surround_place_choice .pl01,
+.surround_place_choice .pl02,
+.surround_place_choice .pl15,
+.surround_place_choice .pl16,
+.surround_place_choice .pl14,
+.surround_place_choice .pl10,
+.surround_place_choice .pl13,
+.surround_place_choice .pl06,
+.surround_place_choice .pl07,
+.surround_place_choice .pl11 {position:absolute; width:80px; height:32px; border:1px solid #c9c9c9; -webkit-border-radius:3px; border-radius:3px; box-shadow:1px 2px 2px rgba(0,0,0,.15); background-color:#fff; background-repeat:no-repeat; background-position:center; background-size:72px 24px; font-size:13px; color:rgba(0,0,0,0); line-height:32px; text-align:center;}
+.surround_place_choice .pl17 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl17_choice_off.png');}
+.surround_place_choice .pl17.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl17_choice.png');}
+.surround_place_choice .pl18 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl18_choice_off.png');}
+.surround_place_choice .pl18.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl18_choice.png');}
+.surround_place_choice .pl09 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl09_choice_off.png');}
+.surround_place_choice .pl09.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl09_choice.png');}
+.surround_place_choice .pl08 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl08_choice_off.png');}
+.surround_place_choice .pl08.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl08_choice.png');}
+.surround_place_choice .pl04 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl04_choice_off.png');}
+.surround_place_choice .pl04.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl04_choice.png');}
+.surround_place_choice .pl03 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl03_choice_off.png');}
+.surround_place_choice .pl03.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl03_choice.png');}
+.surround_place_choice .pl05 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl05_choice_off.png');}
+.surround_place_choice .pl05.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl05_choice.png');}
+.surround_place_choice .pl12 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl12_choice_off.png');}
+.surround_place_choice .pl12.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl12_choice.png');}
+.surround_place_choice .pl01 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl01_choice_off.png');}
+.surround_place_choice .pl01.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl01_choice.png');}
+.surround_place_choice .pl02 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl02_choice_off.png');}
+.surround_place_choice .pl02.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl02_choice.png');}
+.surround_place_choice .pl15 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl15_choice_off.png');}
+.surround_place_choice .pl15.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl15_choice.png');}
+.surround_place_choice .pl16 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl16_choice_off.png');}
+.surround_place_choice .pl16.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl16_choice.png');}
+.surround_place_choice .pl14 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl14_choice_off.png');}
+.surround_place_choice .pl14.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl14_choice.png');}
+.surround_place_choice .pl10 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl10_choice_off.png');}
+.surround_place_choice .pl10.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl10_choice.png');}
+.surround_place_choice .pl13 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl13_choice_off.png');}
+.surround_place_choice .pl13.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl13_choice.png');}
+.surround_place_choice .pl06 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl06_choice_off.png');}
+.surround_place_choice .pl06.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl06_choice.png');}
+.surround_place_choice .pl07 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl07_choice_off.png');}
+.surround_place_choice .pl07.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl07_choice.png');}
+.surround_place_choice .pl11 {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl11_choice_off.png');}
+.surround_place_choice .pl11.on {background-image:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl11_choice.png');}
+/*-------------------------------------------*/
+
+/*--- 매물 상세뷰- 주소/위치- 주변시설- 장소간단정보 미니레이어 ---*/
+.mnlyr {display:inline-block; position:absolute; z-index:20; width:230px; height:85px; margin:-109px 0 0 -124px; -webkit-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 2px 4px rgba(0,0,0,.5); box-shadow:0 2px 4px rgba(0,0,0,.5); background-color:#fff;}
+.mnlyr .titbar {display:block; position:relative; height:29px; -webkit-border-radius:4px 4px 0 0; border-radius:4px 4px 0 0; background-color:#0a1c40;}
+.mnlyr .titbar .title {position:absolute; overflow:hidden; width:190px; height:28px; margin:0 0 0 9px; color:#fff; line-height:28px; font-size:13px; letter-spacing:0; text-overflow:ellipsis; white-space:nowrap;}
+.mnlyr .titbar .x {position:absolute; right:3px; width:28px; height:28px; border:none; outline:0; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl_pin_mnlyr_x.png') no-repeat center; background-size:18px 18px; font-size:13px; color:rgba(0,0,0,0); line-height:28px;}
+.mnlyr .i-key {font-weight:600; display:block; overflow:hidden; position:relative; height:auto; margin:8px 9px 0 9px; font-size:13px; line-height:20px; text-align:left; letter-spacing:-0.3px; text-overflow:ellipsis; white-space:nowrap;}
+.mnlyr .i-key .call {font-size:13px; color:#0079bf;}
+.mnlyr .tail {display:inline-block; position:absolute; left:50%; bottom:-12px; width:20px; height:12px; margin:0 0 0 -10px; background:url('http://image.bbjang.com/imgs/bbjang/img_pc/map/place/pl_pin_mnlyr_tail.png') no-repeat 0 0; background-size:cover;}
+/*-------------------------------------------------------*/

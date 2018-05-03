@@ -1,0 +1,627 @@
+@charset "utf-8";
+/*-------------------- 상세 공통 --------------------*/
+.dt_h3{position:relative; width:100%; height:28px; line-height:28px;}
+
+/*-------------------- 내글 영역 --------------------*/
+.dt_my_wrap{position:relative; width:100%; height:auto; margin-top:10px;}
+.dt_my_wrap:after{content:""; display:block; clear:both;}
+.dt_my_wrap .my_left_box{float:left; width:auto; height:auto;}
+.dt_my_wrap .my_left_box:after{content:""; display:block; clear:both;}
+.dt_my_wrap .my_left_box .btn_left{float:left; width:85px; height:30px; line-height:28px; margin-right:7px; border:1px solid #d4d4d4; box-sizing:border-box; background-color:#f4f4f4; color:#505050; text-align:center; font-size:13px; font-weight:600; cursor:pointer;}
+.dt_my_wrap .my_left_box .btn_left:last-of-type{margin-right:0px;}
+.dt_my_wrap .my_left_box .btn_left:hover{background-color:#f0f0f0;}
+.dt_my_wrap .my_left_box .btn_left:active{background-color:#f0f0f0;}
+.dt_my_wrap .my_right_box{float:right; width:auto; height:auto;}
+.dt_my_wrap .my_right_box:after{content:""; display:block; clear:both;}
+.dt_my_wrap .my_right_box .btn_right{float:left; width:auto; height:30px; line-height:28px; margin-right:7px; padding:0 15px; border:1px solid #d4d4d4; box-sizing:border-box; background-color:#f4f4f4; color:#505050; text-align:center; font-size:13px; font-weight:600; cursor:pointer;}
+.dt_my_wrap .my_right_box .btn_right:last-of-type{margin-right:0px;}
+.dt_my_wrap .my_right_box .btn_right:hover{background-color:#f0f0f0;}
+.dt_my_wrap .my_right_box .btn_right:active{background-color:#f0f0f0;}
+.dt_my_wrap .my_right_box .btn_right img{vertical-align:top; margin:6px 6px 0 0;}
+
+/*-------------------- 사진 영역 --------------------*/
+.dt_photo_wrap{position:relative; width:100%; height:430px; margin-bottom:10px; background-color:#f8f8f8; overflow:hidden;}
+.dt_photo_wrap .photo_ul{position:absolute; top:0; left:0; width:100%; height:430px;}
+.dt_photo_wrap .photo_li{position:absolute; top:0; left:0; width:100%; height:100%; text-align:center; overflow:hidden; cursor:pointer;}
+.dt_photo_wrap .photo_frac{position:absolute; top:10px; right:10px; z-index:100; width:50px; height:25px; line-height:25px; border-radius:12px; background:rgba(50,50,50,0.5); color:#fff; text-align:center; font-size:13px; font-weight:600;}
+.dt_photo_wrap .view_prev, .dt_photo_wrap .view_next{position:absolute; top:0; z-index:100; width:70px; height:100%; cursor:pointer;}
+.dt_photo_wrap .view_prev{left:0; background:url("http://image.bbjang.com/imgs/bbjang/img01/view_prev.png") no-repeat left center; background-size:65px 65px;}
+.dt_photo_wrap .view_next{right:0; background:url("http://image.bbjang.com/imgs/bbjang/img01/view_next.png") no-repeat right center; background-size:65px 65px;}
+
+/* 사진없음 */
+.dt_photo_wrap .photo_buy {position:relative; width:100%; height:430px; background:#dadee2 url(http://image.bbjang.com/imgs/bbjang/img01/bg_detail_buy_01.png) no-repeat center center; background-size:550px 388px;}
+.dt_photo_wrap .photo_sale {position:relative; width:100%; height:430px; background:#dadee2 url(http://image.bbjang.com/imgs/bbjang/img01/bg_detail_sale_01.png) no-repeat center center; background-size:550px 388px;}
+.dt_photo_wrap .photo_rent {position:relative; width:100%; height:430px; background:#dadee2 url(http://image.bbjang.com/imgs/bbjang/img01/bg_detail_rent_01.png) no-repeat center center; background-size:550px 388px;}
+.dt_photo_wrap .photo_month {position:relative; width:100%; height:430px; background:#dadee2 url(http://image.bbjang.com/imgs/bbjang/img01/bg_detail_month_01.png) no-repeat center center; background-size:550px 388px;}
+
+/*-------------------- 타이틀 영역 --------------------*/
+.dt_title_wrap{position:relative; width:100%; height:auto; margin-bottom:10px; padding:15px 25px 17px 25px; border:1px solid #d4d4d4; box-sizing:border-box;}
+.dt_title_wrap .title_loca{width:100%; line-height:19px; font-size:13px; color:#303030; text-align:center; letter-spacing:0;}
+.dt_title_wrap .title_loca .agent_badge{display:inline-block; vertical-align:top; width:auto; height:19px; line-height:17px; margin-left:5px; padding:0 4px; border:1px solid #7943b1; box-sizing:border-box; color:#7943b1; font-size:13px; font-weight:600;} /* 등록자뱃지 */
+.dt_title_wrap .title_h2{width:100%; line-height:19px; font-size:19px; margin:6px 0 8px 0; color:#303030; font-weight:600; text-align:center; white-space:nowrap; overflow:hidden;}
+.dt_title_wrap .title_price{width:100%; text-align:center; white-space:nowrap; overflow:hidden;}
+.dt_title_wrap .title_price .type_badge{display:inline-block; vertical-align:top; width:auto; height:21px; line-height:21px; margin-right:1px; padding:0 5px; background-color:#f54c4c; color:#fff; font-size:15px; font-weight:600;} /* 매물분류뱃지 */
+.dt_title_wrap .title_price .badge_month, .dt_title_wrap .title_price .badge_rent, .dt_title_wrap .title_price .badge_sale, .dt_title_wrap .title_price .badge_short, .dt_title_wrap .title_price .badge_buy{display:inline-block; vertical-align:top; width:auto; height:21px; line-height:21px; margin-right:4px; padding:0 5px; color:#fff; font-size:15px; font-weight:600;} /* 거래형태뱃지 */
+.dt_title_wrap .title_price .badge_month{background-color:#33a381;}
+.dt_title_wrap .title_price .badge_rent{background-color:#92982a;}
+.dt_title_wrap .title_price .badge_sale{background-color:#267ba2;}
+.dt_title_wrap .title_price .badge_short{background-color:#d77327;}
+.dt_title_wrap .title_price .badge_buy{background-color:#70369d;}
+.dt_title_wrap .title_price .price{line-height:21px; font-size:21px; color:#0b7fd0; font-weight:900; letter-spacing:-1px;}
+.dt_title_wrap .title_opt{width:100%; line-height:13px; font-size:13px; margin-top:5px; color:#505050; text-align:center; letter-spacing:0;}
+
+/* 아이콘 영역 */
+.dt_title_wrap .icon_table{position:relative; width:100%; height:auto; margin-top:15px;}
+.dt_title_wrap .icon_tr{position:relative; width:100%; height:auto;}
+.dt_title_wrap .icon_td{vertical-align:middle; position:relative; width:33.33333%; height:auto; padding:5px; box-sizing:border-box; background:url("http://image.bbjang.com/imgs/bbjang/img01/img_simple_bar.png") no-repeat left center; background-size:1px 70%; overflow:hidden; word-break:keep-all;}
+.dt_title_wrap .icon_td:first-of-type{background:none;}
+.dt_title_wrap .icon_td .icon{width:100%; height:40px;}
+.dt_title_wrap .icon_td .area{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_area.png") no-repeat center center; background-size:36px 36px;}
+.dt_title_wrap .icon_td .floor{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_floor.png") no-repeat center center; background-size:36px 36px;}
+.dt_title_wrap .icon_td .money{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_money.png") no-repeat center center; background-size:36px 36px;}
+.dt_title_wrap .icon_td .door{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_door.png") no-repeat center center; background-size:36px 36px;}
+.dt_title_wrap .icon_td .icon_tit{width:100%; line-height:15px; font-size:13px; margin:10px 0 2px 0; color:#808080; text-align:center; letter-spacing:0;}
+.dt_title_wrap .icon_td .icon_txt{width:100%; line-height:20px; font-size:15px; color:#303030; text-align:center; font-weight:600;}
+.dt_title_wrap .icon_td .sub_txt{font-size:13px; color:#505050; font-weight:normal;}
+.dt_title_wrap .no_icon{padding:10px 3px;}
+.dt_title_wrap .no_icon .icon_tit{margin:0 0 8px 0;}
+.dt_title_wrap .icon_td .icon_solo{width:100%; line-height:20px; margin-bottom:5px; padding-right:10px; box-sizing:border-box; font-size:15px; color:#303030; text-align:center; font-weight:600; letter-spacing:0;}
+.dt_title_wrap .icon_td .icon_dl{position:relative; width:100%; line-height:15px; margin-bottom:4px;}
+.dt_title_wrap .icon_td .icon_dl .dt{position:absolute; top:0; left:0; width:40%; color:#808080; font-size:13px; letter-spacing:0px; text-align:right;}
+.dt_title_wrap .icon_td .icon_dl .dd{width:100%; padding-left:44%; box-sizing:border-box; color:#303030; font-size:15px; text-align:left; font-weight:600;}
+.dt_title_wrap .icon_td .icon_ul{width:100%; line-height:20px; font-size:13px; color:#303030; text-align:center; font-weight:600;}
+
+/*-------------------- 상세정보 영역 --------------------*/
+.dt_info_wrap{position:relative; width:100%; height:auto; margin-bottom:10px; padding:20px 25px; border:1px solid #d4d4d4; box-sizing:border-box;}
+.dt_info_wrap .dt_h3{margin-bottom:10px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_h3_info.png") no-repeat left center; background-size:130px 20px;}
+.dt_info_wrap .btn_clicks{display:inline-block; vertical-align:top; width:55px; height:28px; line-height:28px; margin-left:105px; padding:0 18px 0 7px; border-radius:3px; background:#808486 url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_clicks.png") no-repeat 57px center; background-size:15px 16px; color:#fff; font-size:13px; letter-spacing:0px; font-weight:normal; cursor:pointer;}
+.dt_info_wrap .btn_clicks:hover{background:#717678 url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_clicks.png") no-repeat 57px center; background-size:15px 16px}
+.dt_info_wrap .btn_clicks:active{background:#717678 url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_clicks.png") no-repeat 57px center; background-size:15px 16px}
+.dt_info_wrap .info_time{float:right; color:#808080; font-size:13px; font-weight:normal;}
+
+/* 상세정보 리스트 */
+.dt_info_wrap .info_ul{position:relative; width:100%; height:auto;}
+.dt_info_wrap .info_li{position:relative; width:100%; height:auto; border-top:1px solid #d4d4d4;}
+.dt_info_wrap .info_li:after{content:""; display:block; clear:both;}
+.dt_info_wrap .info_li:first-of-type{border-top:0 none;}
+.dt_info_wrap .info_li .info_50{position:relative; width:50%; height:auto; float:left;}
+.dt_info_wrap .info_li .info_100{position:relative; width:100%; height:auto; float:left;}
+.dt_info_wrap .info_li .info_left{position:absolute; top:0; left:0; width:100px; height:44px; line-height:44px; color:#707070; font-size:15px;}
+.dt_info_wrap .info_li .info_right{position:relative; height:auto; line-height:28px; margin:8px 10px 8px 100px; color:#000; font-size:15px; word-break:keep-all;}
+.dt_info_wrap .info_li .info_right:after{content:""; display:block; clear:both;}
+.dt_info_wrap .info_li .info_full{position:relative; width:100%; height:auto; padding-top:40px;}
+.dt_info_wrap .info_li .info_full .info_left{width:100%; height:40px; line-height:40px; font-weight:600;}
+.dt_info_wrap .info_li .info_full .info_left .left_loca{color:#000; margin-left:5px;}
+.dt_info_wrap .info_li .info_full .info_right{margin:0px;}
+.dt_info_wrap .info_li .unit_num{float:left; display:block; width:auto; height:28px; line-height:28px;}
+.dt_info_wrap .info_li .btn_unit{float:left; width:80px; height:28px; padding:0 10px; cursor:pointer;}
+.dt_info_wrap .info_li .option_span{display:inline-block; vertical-align:top; width:auto; height:24px; line-height:24px; margin:2px 5px 2px 0; padding:0 6px; border-radius:3px; background-color:#65aedb; color:#fff; font-size:13px; font-weight:600; letter-spacing:0;}
+.dt_info_wrap .info_li .info_txt{position:relative; width:100%; height:auto; line-height:20px; padding:20px 0 10px 0; color:#000; font-size:15px;}
+
+/* 상세정보 테이블 */
+.dt_info_wrap .info_li .info_right .info_table_50{position:relative; width:50%; height:auto; margin-bottom:5px; box-sizing:border-box; float:left;}
+.dt_info_wrap .info_li .info_right .info_table_50:first-of-type{padding-right:15px;}
+.dt_info_wrap .info_li .info_right .info_table_50:last-of-type{padding-left:15px;}
+.dt_info_wrap .info_li .info_right .info_table_100{position:relative; width:100%; height:auto;}
+.dt_info_wrap .info_li .info_table_tit{position:relative; width:100%; height:30px; line-height:30px; border-top:1px solid #c4c4c4; color:#808080; text-align:center; font-size:13px; font-weight:600; letter-spacing:0;}
+.dt_info_wrap .info_li .info_table{position:relative; width:100%; height:auto; border-top:1px solid #c4c4c4; border-bottom:1px solid #c4c4c4;}
+.dt_info_wrap .info_li .info_table .info_tr{position:relative; width:100%; height:auto; border-top:1px solid #e4e4e4;}
+.dt_info_wrap .info_li .info_table .info_tr:first-of-type{border-top:none;}
+.dt_info_wrap .info_li .info_table .info_td{line-height:15px; box-sizing:border-box; font-size:13px; word-break:keep-all;}
+.dt_info_wrap .info_li .info_table .td_tit{border-right:1px solid #e4e4e4; background-color:#f8f8f8; color:#808080; text-align:center;}
+.dt_info_wrap .info_li .info_table .td_num{padding-right:10px; color:#808080; text-align:right; font-size:12px;}
+.dt_info_wrap .info_li .info_table .td_num .num{margin-right:3px; color:#303030; font-size:13px;}
+.dt_info_wrap .info_li .info_table .td_num .blue{margin-right:3px; color:#0b7fd0; font-size:13px; font-weight:600;}
+.dt_info_wrap .info_li .info_table .td_area{padding-right:10px; color:#303030; text-align:right;}
+.dt_info_wrap .info_li .info_table .td_ground{border-left:1px solid #e4e4e4; color:#303030; text-align:center;}
+.dt_info_wrap .info_li .info_table .td_ground:first-of-type{border-left:none;}
+
+.dt_info_wrap .info_li .info_right .info_table_50 .info_td{padding:7px 0;}
+.dt_info_wrap .info_li .info_right .info_table_50 .info_td:first-of-type{width:45%;}
+.dt_info_wrap .info_li .info_right .info_table_100 .info_td{width:25%; padding:8px 0;}
+
+.dt_info_wrap .info_li .info_total{position:relative; width:100%; height:auto; padding:10px 10px 15px 100px; box-sizing:border-box; color:#303030; text-align:right; font-size:15px; clear:both;}
+.dt_info_wrap .info_li .info_total .blue{margin:0 7px 0 10px; color:#0b7fd0; font-size:19px; font-weight:900;}
+
+/* 층별 정보 */
+.dt_info_wrap .floor_more{width:100%; height:28px; line-height:26px; border:1px solid #e4e4e4; box-sizing:border-box; background-color:#f4f4f4; color:#505050; text-align:center; font-size:15px; cursor:pointer;}
+.dt_info_wrap .floor_more:hover{background-color:#f0f0f0;}
+.dt_info_wrap .floor_more:active{background-color:#f0f0f0;}
+.dt_info_wrap .floor_more img{vertical-align:top; margin:10px 0 0 5px;}
+
+.dt_info_wrap .floor_table{width:100%; height:auto; margin-top:5px; border:1px solid #e4e4e4;}
+.dt_info_wrap .floor_table tr{width:100%; height:29px; line-height:29px; text-align:center; font-size:13px;}
+.dt_info_wrap .floor_table td{border-left:1px solid #e4e4e4; box-sizing:border-box; word-break:keep-all;}
+.dt_info_wrap .floor_table td:first-of-type{border-left:none;}
+.dt_info_wrap .floor_table .thead{border-bottom:1px solid #e4e4e4; color:#808080;}
+.dt_info_wrap .floor_table .tbody{color:#303030;}
+
+/*-------------------- 공공DB 공통 --------------------*/
+.dt_data_wrap{position:relative; width:100%; height:auto; margin-bottom:10px; padding:20px 25px; border:1px solid #d4d4d4; box-sizing:border-box;}
+
+/* DB 타이틀 */
+.dt_data_wrap .data_tit{width:100%; height:auto; line-height:19px; margin-bottom:10px; color:#505050; text-align:center; font-size:17px; font-weight:600;}
+.dt_data_wrap .data_tit .sub_txt{color:#808080; font-size:13px; font-weight:normal; letter-spacing:0px;}
+
+/* DB 서브타이틀 */
+.dt_data_wrap .data_sub_tit{width:100%; height:auto; line-height:25px; padding-left:15px; box-sizing:border-box; background:url("http://image.bbjang.com/imgs/bbjang/img01/ico_data_sub_tit.png") no-repeat 0px 9px; background-size:7px 7px; color:#505050; font-size:15px;}
+
+/* 테이블 */
+.dt_data_wrap .data_table{width:100%; height:auto; border:1px solid #d4d4d4;}
+.dt_data_wrap .data_table tr{width:100%; height:32px; line-height:32px; text-align:center; color:#505050; font-size:15px;}
+.dt_data_wrap .data_table td{border-left:1px solid #d4d4d4; box-sizing:border-box; word-break:keep-all;}
+.dt_data_wrap .data_table td:first-of-type{border-left:none;}
+.dt_data_wrap .data_table .thead{border-bottom:1px solid #d4d4d4;}
+
+/* 서브데이터 더보기 */
+.dt_data_wrap .data_sub_more{width:100%; height:30px; line-height:28px; border:1px solid #d4d4d4; box-sizing:border-box; background-color:#f4f4f4; color:#505050; text-align:center; font-size:15px; cursor:pointer;}
+.dt_data_wrap .data_sub_more:hover{background-color:#f0f0f0;}
+.dt_data_wrap .data_sub_more:active{background-color:#f0f0f0;}
+.dt_data_wrap .data_sub_more img{vertical-align:top; margin:11px 0 0 5px;}
+
+/* 데이터없음 */
+.data_none{position:relative; width:100%; height:auto; padding:80px 0; text-align:center; color:#808080; font-size:15px; font-weight:600;}
+
+/*-------------------- 매물주변정보 영역 --------------------*/
+.dt_data_wrap .commerce_h3{margin-bottom:12px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_h3_commerce.png") no-repeat left center; background-size:130px 20px;}
+.dt_data_wrap .around_h3{margin-bottom:12px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_h3_around.png") no-repeat left center; background-size:130px 20px;}
+
+/* 매물주변정보 탭 */
+.dt_data_wrap .around_tab{position:relative; width:100%; height:auto; margin-top:10px; border-bottom:1px solid #d4d4d4;}
+.dt_data_wrap .around_tab:after{content:""; display:block; clear:both;}
+.dt_data_wrap .around_tab .tab_box{position:relative; width:110px; height:36px; float:left; overflow:hidden;}
+.dt_data_wrap .around_tab .tab_box .tab_input{display:block; position:absolute; width:100%; height:100%; opacity:0;}
+.dt_data_wrap .around_tab .tab_box .tab_lb{display:block; width:100%; height:34px; line-height:34px; margin-top:2px; border-left:1px solid #e4e4e4; box-sizing:border-box; background-color:#f4f4f4; color:#808080; text-align:center; font-size:15px;}
+.dt_data_wrap .around_tab .tab_box:first-of-type .tab_lb{border-left:none;}
+.dt_data_wrap .around_tab .tab_box .tab_input:checked + .tab_lb{height:36px; line-height:36px; margin-top:0px; border-radius:5px 5px 0 0; background-color:#0ca2ed; color:#fff; font-weight:600;}
+
+/* 학군정보 */
+.dt_data_wrap .school_box{position:relative; width:100%; height:auto; margin-top:15px;}
+.dt_data_wrap .school_box .school_bar{position:absolute; top:0; right:0;}
+.dt_data_wrap .school_box .school_bar:after{content:""; display:block; clear:both;}
+.dt_data_wrap .school_box .bar_box{position:relative; width:90px; height:30px; text-align:center; float:left;}
+.dt_data_wrap .school_box .bar_box .bar_input{display:block; position:absolute; width:100%; height:100%; opacity:0;}
+.dt_data_wrap .school_box .bar_box .bar_lb{display:inline-block; vertical-align:middle; width:auto; height:26px; line-height:26px; color:#525252; font-size:15px; font-weight:600;}
+.dt_data_wrap .school_box .bar_box .bar_input:checked + .bar_lb{color:#0ca2ed; border-bottom:2px solid #0ca2ed; box-sizing:border-box;}
+.dt_data_wrap .school_box .school_ul{position:relative; width:100%; height:auto; margin-top:15px;}
+.dt_data_wrap .school_box .school_ul:after{content:""; display:block; clear:both;}
+.dt_data_wrap .school_box .school_li{position:relative; width:50%; height:auto; margin-top:10px; box-sizing:border-box; float:left;}
+.dt_data_wrap .school_box .school_li:nth-of-type(1){margin-top:0px;}
+.dt_data_wrap .school_box .school_li:nth-of-type(2){margin-top:0px;}
+.dt_data_wrap .school_box .school_li:nth-of-type(odd){padding-right:5px;}
+.dt_data_wrap .school_box .school_li:nth-of-type(even){padding-left:5px;}
+
+.dt_data_wrap .school_box .school_bg{position:relative; width:100%; height:auto; padding:6px 6px 6px 52px; border:1px solid #d4d4d4; box-sizing:border-box;}
+.dt_data_wrap .school_box .school_badge{position:absolute; top:8px; left:8px; width:36px; height:36px; line-height:36px; color:#fff; text-align:center;}
+.dt_data_wrap .school_box .element{background-color:#f4a43d;}
+.dt_data_wrap .school_box .middle{background-color:#61b28b;}
+.dt_data_wrap .school_box .high{background-color:#9161b2;}
+.dt_data_wrap .school_box .school_top{height:21px; line-height:21px; color:#303030; font-size:15px; font-weight:600;}
+.dt_data_wrap .school_box .school_top .bar{margin:0 5px 0 6px; font-size:13px; font-weight:normal;}
+.dt_data_wrap .school_box .school_top .distance{font-size:13px; font-weight:normal;}
+.dt_data_wrap .school_box .school_bottom{line-height:20px; color:#808080; font-size:13px; letter-spacing:0;}
+.dt_data_wrap .school_box .data_sub_more{margin-top:10px;}
+
+/* 실거래가 탭 */
+.dt_data_wrap .price_tab{position:relative; width:400px; height:auto; margin-top:10px; border:1px solid #d4d4d4;}
+.dt_data_wrap .price_tab:after{content:""; display:block; clear:both;}
+.dt_data_wrap .price_tab .tab_box{position:relative; width:33.33333%; height:30px; line-height:30px; float:left; border-left:1px solid #e4e4e4; box-sizing:border-box; background-color:#f4f4f4;}
+.dt_data_wrap .price_tab .tab_box:first-of-type{border-left:none;}
+.dt_data_wrap .price_tab .tab_box .tab_input{display:block; position:absolute; width:100%; height:100%; opacity:0;}
+.dt_data_wrap .price_tab .tab_box .tab_lb{display:block; width:100%; height:100%; color:#808080; text-align:center; font-size:15px;}
+.dt_data_wrap .price_tab .tab_box .tab_input:checked + .tab_lb{position:absolute; top:-1px; height:32px; line-height:32px; background-color:#0ca2ed; color:#fff; font-weight:600;}
+
+/* 실거래가 */
+.dt_data_wrap .price_box{position:relative; width:100%; height:auto; margin-top:15px;}
+.dt_data_wrap .price_box .price_slct{position:absolute; top:39px; right:0;}
+.dt_data_wrap .price_box .price_slct select{display:block; width:115px; height:28px; line-height:28px; padding:0 20px 0 10px; border:1px solid #d4d4d4; border-radius:3px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_slct_drop.png") no-repeat 92% center; background-size:10px 6px; color:#505050; font-size:13px;}
+.dt_data_wrap .price_box .price_table{position:relative; width:100%; height:auto; margin-top:5px;}
+.dt_data_wrap .price_box .price_table .data_table{margin-bottom:5px;}
+.dt_data_wrap .price_box .price_table tr td:nth-child(2){padding:0 6px;}
+.dt_data_wrap .price_box .price_table .thead{color:#808080;}
+.dt_data_wrap .price_box .price_table .tbody{color:#000;}
+
+/* 인구분석 */
+.dt_data_wrap .resident_box{position:relative; width:100%; height:auto; padding:20px 0;}
+.dt_data_wrap .resident_chart{position:relative; width:100%; height:auto;}
+.dt_data_wrap .resident_chart .loca{width:100%; height:auto; text-align:center; color:#303030; font-size:15px;}
+.dt_data_wrap .resident_chart .chart{position:relative; width:100%; height:240px;}
+.dt_data_wrap .resident_chart .total{position:absolute; top:50%; width:100%; height:auto; padding-right:31%; box-sizing:border-box;text-align:center; color:#303030; font-size:15px;}
+
+/* 유동인구 현황 */
+.dt_data_wrap .floating_box{position:relative; width:100%; height:auto; padding:15px 0;}
+
+.dt_data_wrap .floating_loca{position:relative; width:100%; height:auto; margin-bottom:10px;}
+.dt_data_wrap .floating_loca:after{content:""; display:block; clear:both;}
+.dt_data_wrap .floating_loca .loca_ul{position:relative; width:100%; height:auto; margin-top:5px;}
+.dt_data_wrap .floating_loca .loca_ul:after{content:""; display:block; clear:both;}
+.dt_data_wrap .floating_loca .loca_li{position:relative; width:50%; height:auto; padding-left:15px; box-sizing:border-box; color:#000; font-size:15px; float:left;}
+.dt_data_wrap .floating_loca .loca_input{position:absolute; top:0; left:0; display:block; width:0px; height:0px; opacity:0;}
+.dt_data_wrap .floating_loca .loca_lb{display:inline-block; vertical-align:top; width:auto; height:32px; line-height:32px; padding-left:28px; background:url("http://image.bbjang.com/imgs/bbjang/bbj_ad/btn_rdo_off2.png") 0 7px no-repeat; background-size:18px 18px;}
+.dt_data_wrap .floating_loca .loca_input:checked + .loca_lb{background:url("http://image.bbjang.com/imgs/bbjang/img01/btn_rdo_on4.png") 0 7px no-repeat; background-size:18px 18px;}
+.dt_data_wrap .floating_loca .loca_map{display:inline-block; vertical-align:top; width:70px; height:24px; line-height:24px; margin:5px 0 0 7px; border:1px solid #e4e4e4; border-radius:3px; background-color:#fff; color:#808080; text-align:center; font-size:13px; cursor:pointer;}
+.dt_data_wrap .floating_loca .loca_map:hover{background-color:#fafafa;}
+.dt_data_wrap .floating_loca .loca_map:active{background-color:#fafafa;}
+
+.dt_data_wrap .floating_day{position:relative; width:100%; height:auto; margin-bottom:15px;}
+.dt_data_wrap .floating_day .day_how{position:absolute; top:0px; right:15px;}
+.dt_data_wrap .floating_day .day_how_btn{position:relative; width:70px; height:24px; line-height:24px; border:1px solid #e4e4e4; border-radius:3px; text-align:center; color:#808080; font-size:13px; cursor:default;}
+.dt_data_wrap .floating_day .day_how_content{display:none; position:absolute; top:-200px; right:0px; width:460px; height:auto; line-height:21px; padding:15px; border-radius:10px; border:1px solid #e4e4e4; background-color:#fff; color:#111; box-shadow:2px 2px 10px rgba(0,0,0,0.1);}
+.dt_data_wrap .floating_day .day_how_content:after{content:""; display:block; position:absolute; bottom:-12px; right:25px; z-index:10; width:14px; height:12px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_how_tri.png") 0 0 no-repeat; background-size:100%;}
+.dt_data_wrap .floating_day .day_how_content .font_b{font-weight:600; text-decoration:underline;}
+.dt_data_wrap .floating_day .day_how_content .txt_first{margin-bottom:10px;}
+.dt_data_wrap .floating_day .day_how_content .txt_second{margin-bottom:17px;}
+.dt_data_wrap .floating_day .day_how_content .txt_sub{line-height:18px; color:#555; font-size:15px;}
+.dt_data_wrap .floating_day .day_how_content .day_how_clse{position:absolute; top:15px; right:15px; z-index:10; width:20px; height:20px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_how_clse.png") 0 0 no-repeat; background-size:100%; cursor:pointer;}
+
+.dt_data_wrap .floating_day .day_table{position:relative; width:100%; height:auto; padding:0 15px; box-sizing:border-box;}
+.dt_data_wrap .floating_day .day_table .data_table{margin-top:7px;}
+.dt_data_wrap .floating_day .day_table td{width:14.2%;}
+.dt_data_wrap .floating_day .day_table .thead{color:#808080;}
+.dt_data_wrap .floating_day .day_table .tbody{color:#303030; font-weight:600;}
+
+.dt_data_wrap .floating_time{position:relative; width:100%; height:auto;}
+.dt_data_wrap .floating_time .chart{position:relative; width:100%; height:240px;}
+
+/* 업종분석 */
+.dt_data_wrap .business_box{position:relative; width:100%; height:auto; padding:15px 0;}
+.dt_data_wrap .business_box .data_sub_tit{color:#0ca2ed; font-weight:600;}
+
+.dt_data_wrap .business_slct{position:relative; width:100%; height:auto; margin-bottom:15px;}
+.dt_data_wrap .business_slct .slct_div{position:relative; width:100%; height:auto; padding:0 15px; box-sizing:border-box; margin-top:5px;}
+.dt_data_wrap .business_slct .slct_div:after{content:""; display:block; clear:both;}
+.dt_data_wrap .business_slct .slct_left{position:relative; width:73%; height:auto; padding-left:40px; padding-right:20px; box-sizing:border-box; float:left;}
+.dt_data_wrap .business_slct .slct_right{position:relative; width:27%; height:auto; padding-left:40px; box-sizing:border-box; float:left;}
+.dt_data_wrap .business_slct .slct_tit{position:absolute; top:0px; left:0px; width:40px; height:34px; line-height:34px; color:#505050; font-size:15px; font-weight:600;}
+.dt_data_wrap .business_slct .slct_pop{width:100%; height:34px; line-height:32px; padding:0 15px; border:1px solid #dedede; border-radius:3px; box-sizing:border-box; background:#fff url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_slct_drop.png") no-repeat 97% center; background-size:10px 6px; font-size:15px; cursor:pointer;}
+.dt_data_wrap .business_slct .slct_pop:hover{background-color:#fafafa;}
+.dt_data_wrap .business_slct .slct_pop:active{background-color:#fafafa;}
+.dt_data_wrap .business_slct .slct_placeholder{color:#909090;}
+.dt_data_wrap .business_slct .slct_result{color:#303030;}
+.dt_data_wrap .business_slct .slct_right select{display:block; width:100%; height:34px; line-height:32px; padding:0 15px; border:1px solid #d4d4d4; border-radius:3px; box-sizing:border-box; background:#fff url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_slct_drop.png") no-repeat 91% center; background-size:10px 6px; outline:none; color:#303030; font-size:15px; cursor:pointer;}
+.dt_data_wrap .business_slct .slct_right select:hover{background-color:#fafafa;}
+
+.dt_data_wrap .business_num{position:relative; width:100%; height:auto; margin-bottom:15px;}
+.dt_data_wrap .business_num .data_sub_tit{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_business_sub.png") no-repeat 2px 8px; background-size:8px 8px;}
+.dt_data_wrap .business_num .num_table{position:relative; width:100%; height:auto; padding:0 15px; box-sizing:border-box;}
+.dt_data_wrap .business_num .num_table .data_table{margin-top:7px;}
+.dt_data_wrap .business_num .num_table td{width:33.33333%;}
+.dt_data_wrap .business_num .num_table .thead{color:#808080;}
+.dt_data_wrap .business_num .num_table .tbody{color:#303030; font-weight:600;}
+.dt_data_wrap .business_num .num_table .fc_blue{color:#156daa;}
+
+.dt_data_wrap .business_list{position:relative; width:100%; height:auto;}
+.dt_data_wrap .business_list .data_sub_tit{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_business_sub.png") no-repeat 2px 8px; background-size:8px 8px;}
+.dt_data_wrap .business_list .data_none{line-height:20px; padding:25px 0; color:#909090;}
+.dt_data_wrap .business_list .list_div{position:relative; width:100%; height:auto; padding:0 15px; box-sizing:border-box;}
+.dt_data_wrap .business_list .list_ul{position:relative; width:100%; height:auto; margin-top:3px;}
+.dt_data_wrap .business_list .list_li{position:relative; width:100%; height:auto;}
+.dt_data_wrap .business_list .list_li:after{content:""; display:block; clear:both;}
+.dt_data_wrap .business_list .list_li .list_50{position:relative; width:50%; height:auto; box-sizing:border-box; float:left;}
+.dt_data_wrap .business_list .list_li .list_50:first-of-type{padding-right:15px;}
+.dt_data_wrap .business_list .list_li .list_50:last-of-type{padding-left:15px;}
+.dt_data_wrap .business_list .list_li .list_bg{position:relative; width:100%; height:auto; padding:7px; border-bottom:1px solid #d4d4d4; box-sizing:border-box;}
+.dt_data_wrap .business_list .list_li:last-of-type .list_bg{border-bottom:none;}
+.dt_data_wrap .business_list .list_li .list_name{display:block; width:100%; height:auto; line-height:21px; color:#525252; font-size:15px; font-weight:600;}
+.dt_data_wrap .business_list .list_li .list_loca{display:block; width:100%; height:auto; line-height:17px; color:#686868; font-size:13px; letter-spacing:0px;}
+.dt_data_wrap .business_list .list_li .list_btn_map{position:absolute; top:10px; right:7px; width:60px; height:32px; line-height:30px; border:1px solid #d0d0d0; border-radius:3px; box-sizing:border-box; background-color:#fff; color:#686868; font-size:13px; text-align:center; cursor:pointer;}
+.dt_data_wrap .business_list .list_li .list_btn_map:hover{background-color:#fafafa;}
+.dt_data_wrap .business_list .list_li .list_btn_map:active{background-color:#fafafa;}
+.dt_data_wrap .business_list .data_sub_more{margin-top:5px;}
+
+.dt_data_wrap .business_source{width:100%; height:auto; line-height:17px; color:#909090; font-size:13px; text-align:center;}
+
+/* 타지역 더보기 */
+.dt_data_wrap .data_more{position:relative; width:100%; height:35px; line-height:33px; border-radius:3px; background-color:#606ef1; color:#fff; text-align:center; font-size:15px; font-weight:600; cursor:pointer;}
+.dt_data_wrap .data_more:hover{background-color:#5a68e6;}
+.dt_data_wrap .data_more:active{background-color:#5a68e6;}
+
+/*-------------------- 단지정보 & 공공정보 영역 --------------------*/
+.dt_data_wrap .complex_h3{margin-bottom:12px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_h3_complex.png") no-repeat left center; background-size:130px 20px;}
+.dt_data_wrap .public_h3{margin-bottom:12px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_h3_public.png") no-repeat left center; background-size:130px 20px;}
+
+/* 간단정보 */
+.dt_data_wrap .complex_icon_ul{position:relative; width:100%; height:auto; padding-bottom:12px; border-bottom:1px solid #d4d4d4;}
+.dt_data_wrap .complex_icon_ul:after{content:""; display:block; clear:both;}
+.dt_data_wrap .complex_icon_li{position:relative; width:25%; height:auto; float:left; overflow:hidden;}
+.dt_data_wrap .complex_icon_li .complex_icon{width:100%; height:43px;} 
+.dt_data_wrap .complex_icon_li .calendar{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_calendar.png") no-repeat center center; background-size:auto 43px;}
+.dt_data_wrap .complex_icon_li .apart{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_apart.png") no-repeat center center; background-size:auto 43px;}
+.dt_data_wrap .complex_icon_li .peaple{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_people.png") no-repeat center center; background-size:auto 43px;}
+.dt_data_wrap .complex_icon_li .parking{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/ico_parking.png") no-repeat center center; background-size:auto 43px;}
+.dt_data_wrap .complex_icon_li .complex_icon_tit{width:100%; line-height:15px; font-size:13px; margin:10px 0 2px 0; color:#808080; text-align:center; letter-spacing:0;}
+.dt_data_wrap .complex_icon_li .complex_icon_txt{width:100%; line-height:18px; font-size:15px; color:#303030; text-align:center;}
+
+/* 상세정보 */
+.dt_data_wrap .complex_info_ul{position:relative; width:100%; height:auto; margin-bottom:8px;}
+.dt_data_wrap .complex_info_li{position:relative; width:100%; height:auto; border-top:1px solid #d4d4d4;}
+.dt_data_wrap .complex_info_li:after{content:""; display:block; clear:both;}
+.dt_data_wrap .complex_info_li:first-of-type{border-top:0 none;}
+.dt_data_wrap .complex_info_li .complex_info_50{position:relative; width:50%; height:auto; float:left;}
+.dt_data_wrap .complex_info_li .complex_info_100{position:relative; width:100%; height:auto; float:left;}
+.dt_data_wrap .complex_info_li .complex_info_left{position:absolute; top:0; left:0; width:100px; height:auto; line-height:20px; padding:12px 0; color:#707070; font-size:15px;}
+.dt_data_wrap .complex_info_li .complex_info_left .sub_txt{display:block; font-size:13px;}
+.dt_data_wrap .complex_info_li .complex_info_right{position:relative; height:auto; line-height:20px; margin:12px 10px 12px 100px; color:#000; font-size:15px; word-break:keep-all;}
+.dt_data_wrap .complex_info_li .complex_info_100 .complex_info_right{margin:22px 10px 22px 100px;}
+
+/* 관리비 */
+.dt_data_wrap .maintain_box{position:relative; width:100%; height:auto; margin-top:15px;}
+.dt_data_wrap .maintain_box .maintain_table{position:relative; width:100%; height:auto; margin-top:10px;}
+.dt_data_wrap .maintain_box .maintain_table tr td{width:25%;}
+.dt_data_wrap .maintain_box .maintain_table .sub_txt{font-size:13px; letter-spacing:0;}
+.dt_data_wrap .maintain_box .maintain_table .blue_txt{color:#0ca2ed; font-weight:600;}
+.dt_data_wrap .maintain_box .maintain_table .thead{color:#808080;}
+.dt_data_wrap .maintain_box .maintain_table .tbody{height:42px; line-height:42px; color:#000;}
+
+/* 평면도 */
+.dt_data_wrap .plan_box{position:relative; width:100%; height:auto; margin-top:10px;}
+.dt_data_wrap .plan_box .data_sub_tit{float:left; width:auto; line-height:28px;}
+.dt_data_wrap .plan_box .btn_unit{float:left; width:80px; height:28px; padding:0 10px; cursor:pointer;}
+.dt_data_wrap .plan_box .plan_bg{clear:both; position:relative; width:100%; height:auto; padding-top:10px;}
+.dt_data_wrap .plan_box .plan_tab_div{position:relative; width:100%; height:auto; padding:10px 100px 0 0; box-sizing:border-box; border:1px solid #ccc;}
+.dt_data_wrap .plan_box .plan_tab_div:after{content:""; display:block; clear:both;}
+.dt_data_wrap .plan_box .plan_tab_div .tab_box{position:relative; width:107px; height:30px; line-height:30px; margin:0 0 10px 10px; float:left;}
+.dt_data_wrap .plan_box .plan_tab_div .tab_box .tab_input{display:block; position:absolute; width:100%; height:100%; opacity:0; cursor:pointer;}
+.dt_data_wrap .plan_box .plan_tab_div .tab_box .tab_lb{display:block; width:100%; height:100%; text-align:center; color:#808080; font-size:13px; font-weight:600;}
+.dt_data_wrap .plan_box .plan_tab_div .tab_box .tab_input:checked + .tab_lb{background-color:#0ca2ed; color:#fff;} 
+.dt_data_wrap .plan_box .plan_tab_div .tab_more{position:absolute; top:10px; right:11px; z-index:100; width:85px; height:30px; line-height:28px; border:1px solid #d4d4d4; box-sizing:border-box; background-color:#f4f4f4; color:#505050; text-align:center; font-size:15px; cursor:pointer;}
+.dt_data_wrap .plan_box .plan_tab_div .tab_more:hover{background-color:#f0f0f0;}
+.dt_data_wrap .plan_box .plan_tab_div .tab_more:active{background-color:#f0f0f0;}
+.dt_data_wrap .plan_box .plan_tab_div .tab_more img{vertical-align:top; margin:11px 0 0 5px;}
+.dt_data_wrap .plan_box .plan_img_div{position:relative; width:100%; height:auto; box-sizing:border-box; border-right:1px solid #ccc; border-bottom:1px solid #ccc; border-left:1px solid #ccc; padding:10px 70px; box-sizing:border-box;}
+.dt_data_wrap .plan_box .plan_img_div .img_ul{position:relative; width:100%; height:337px; overflow:hidden;}
+.dt_data_wrap .plan_box .plan_img_div .img_li{position:relative; width:100%; height:100%; text-align:center; cursor:pointer;}
+.dt_data_wrap .plan_box .plan_img_div .img_prev, .dt_data_wrap .plan_box .plan_img_div .img_next{position:absolute; top:0; z-index:100; width:70px; height:100%; cursor:pointer;}
+.dt_data_wrap .plan_box .plan_img_div .img_prev{left:0; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_prev.png") no-repeat center center; background-size:15px 29px;}
+.dt_data_wrap .plan_box .plan_img_div .img_next{right:0; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_next.png") no-repeat center center; background-size:15px 29px;}
+.dt_data_wrap .plan_box .plan_img_div .img_zoom{position:absolute; top:10px; right:11px; z-index:200; width:85px; height:30px; line-height:30px; background-color:#707070; color:#fff; text-align:center; font-size:15px; cursor:pointer;}
+.dt_data_wrap .plan_box .plan_img_div .img_zoom:hover{background-color:#686868;}
+.dt_data_wrap .plan_box .plan_img_div .img_zoom:active{background-color:#686868;}
+
+/*-------------------- 평면도 영역 --------------------*/
+.dt_plan_wrap{position:relative; width:100%; height:auto; margin-bottom:10px; padding:20px 25px; border:1px solid #d4d4d4; box-sizing:border-box;}
+.dt_plan_wrap .dt_h3{margin-bottom:10px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_h3_plan.png") no-repeat left center; background-size:130px 20px;}
+.dt_plan_wrap .dt_h3 .btn_unit{display:inline-block; vertical-align:middle; width:80px; height:28px; margin-left:130px; padding:0 10px; cursor:pointer;}
+.dt_plan_wrap .plan_tab_div{position:relative; width:100%; height:auto; padding:10px 100px 0 0; box-sizing:border-box; border-bottom:1px solid #ccc;}
+.dt_plan_wrap .plan_tab_div:after{content:""; display:block; clear:both;}
+.dt_plan_wrap .plan_tab_div .tab_box{position:relative; width:107px; height:30px; line-height:30px; margin:0 0 10px 10px; float:left;}
+.dt_plan_wrap .plan_tab_div .tab_box .tab_input{display:block; position:absolute; width:100%; height:100%; opacity:0; cursor:pointer;}
+.dt_plan_wrap .plan_tab_div .tab_box .tab_lb{display:block; width:100%; height:100%; text-align:center; color:#808080; font-size:13px; font-weight:600;}
+.dt_plan_wrap .plan_tab_div .tab_box .tab_input:checked + .tab_lb{background-color:#0ca2ed; color:#fff;} 
+.dt_plan_wrap .plan_tab_div .tab_more{position:absolute; top:10px; right:11px; z-index:100; width:85px; height:30px; line-height:28px; border:1px solid #d4d4d4; box-sizing:border-box; background-color:#f4f4f4; color:#505050; text-align:center; font-size:15px; cursor:pointer;}
+.dt_plan_wrap .plan_tab_div .tab_more:hover{background-color:#f0f0f0;}
+.dt_plan_wrap .plan_tab_div .tab_more:active{background-color:#f0f0f0;}
+.dt_plan_wrap .plan_tab_div .tab_more img{vertical-align:top; margin:11px 0 0 5px;}
+
+.dt_plan_wrap .plan_img_div{position:relative; width:100%; height:auto; box-sizing:border-box; padding:10px 70px; box-sizing:border-box;}
+.dt_plan_wrap .plan_img_div .img_ul{position:relative; width:100%; height:337px; overflow:hidden;}
+.dt_plan_wrap .plan_img_div .img_li{position:relative; width:100%; height:100%; text-align:center; cursor:pointer;}
+.dt_plan_wrap .plan_img_div .img_prev, .dt_plan_wrap .plan_img_div .img_next{position:absolute; top:0; z-index:100; width:70px; height:100%; cursor:pointer;}
+.dt_plan_wrap .plan_img_div .img_prev{left:0; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_prev.png") no-repeat center center; background-size:15px 29px;}
+.dt_plan_wrap .plan_img_div .img_next{right:0; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_next.png") no-repeat center center; background-size:15px 29px;}
+.dt_plan_wrap .plan_img_div .img_zoom{position:absolute; top:10px; right:11px; z-index:200; width:85px; height:30px; line-height:30px; background-color:#707070; color:#fff; text-align:center; font-size:15px; cursor:pointer;}
+.dt_plan_wrap .plan_img_div .img_zoom:hover{background-color:#686868;}
+.dt_plan_wrap .plan_img_div .img_zoom:active{background-color:#686868;}
+
+/*-------------------- 추천매물 --------------------*/
+.rc_wrap{position:relative; top:0; left:0; right:0; width:100%; height:auto; margin-bottom:10px;}
+.rc_wrap .rc_title{width:100%; height:38px; line-height:38px; padding:0 7px; font-size:15px; color:#fff; background-color:#505050;}
+
+/*-------------------- 등록자정보 --------------------*/
+.section_right{margin:10px 0; background-color:#fff;}
+
+/* 등록자정보 */
+.dt_agent_wrap{position:relative; width:100%; height:auto; padding:20px 25px; border:1px solid #d4d4d4; box-sizing:border-box;}
+.dt_agent_wrap .dt_h3{margin-bottom:10px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_h3_agent.png") no-repeat left center; background-size:130px 20px;}
+.dt_agent_wrap .agent_box{position:relative; width:100%; height:auto;}
+.dt_agent_wrap .agent_box .agent_photo{position:absolute; top:50%; left:0; width:70px; height:70px; margin-top:-35px; border-radius:100%; background:url(http://image.bbjang.com/imgs/bbjang/img01/img_my_default.png) no-repeat center center; background-size:contain; overflow:hidden;}
+.dt_agent_wrap .agent_box .agent_photo img{display:block; width:100%; height:100%; object-fit:cover;}
+.dt_agent_wrap .agent_box .agent_txt{display:table; position:relative; width:100%; min-height:70px; padding-left:85px; box-sizing:border-box;}
+.dt_agent_wrap .agent_box .agent_txt .txt_vetical{display:table-cell; vertical-align:middle; width:100%; height:auto;}
+.dt_agent_wrap .agent_box .agent_txt .agent_name{display:block; line-height:15px; color:#000; font-size:15px;}
+.dt_agent_wrap .agent_box .agent_txt .agent_num{display:block; line-height:15px; margin-top:6px; color:#000; font-size:15px; font-weight:600;}
+.dt_agent_wrap .agent_box .agent_txt .agent_real{display:block; line-height:15px; margin-top:6px; color:#7943b1; font-size:15px; font-weight:600;}
+.dt_agent_wrap .agent_box .agent_txt .btn_go_web{display:block; width:100px; height:26px; line-height:26px; margin-top:6px; border-radius:3px; background-color:#875ad1; color:#fff; text-align:center; font-size:13px; letter-spacing:0px; cursor:pointer;}
+.dt_agent_wrap .agent_box .agent_txt .btn_go_web:hover{background-color:#7e51c7;}
+.dt_agent_wrap .agent_box .agent_txt .btn_go_web:active{background-color:#7e51c7;}
+.dt_agent_wrap .agent_box .agent_txt .agent_private{display:block; line-height:17px; color:#505050; font-size:15px; font-weight:600;}
+
+/* 문자상담 */
+.dt_sms_wrap{position:relative; width:100%; height:auto; padding:20px 25px 25px 25px; border-width:0 1px 1px 1px; border-style:solid; border-color:#d4d4d4; box-sizing:border-box;}
+.dt_sms_wrap .dt_h3{margin-bottom:6px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_h3_sms.png") no-repeat left center; background-size:130px 20px;}
+.dt_sms_wrap .sms_p{width:100%; height:auto; line-height:19px; margin-bottom:10px; color:#808080; font-size:15px;}
+.dt_sms_wrap .input_box{width:100%; height:auto;}
+.dt_sms_wrap .input_box .input_txt{display:block; width:100%; height:auto; line-height:16px; margin-bottom:5px; padding:10px 15px; border:1px solid #d4d4d4; box-sizing:border-box; box-shadow:none; background-color:#fff; color:#000; font-size:15px;}
+.dt_sms_wrap .input_box .input_txt:focus{border:1px solid #a4a4a4;}
+.dt_sms_wrap .input_box .input_txt::-webkit-placeholder{color:#808080;}
+.dt_sms_wrap .input_box .input_txt::-moz-placeholder{color:#808080;}
+.dt_sms_wrap .input_box .input_txt:-ms-placeholder{color:#808080;}
+.dt_sms_wrap .input_box .input_btn{display:block; width:100%; height:40px; line-height:40px; border:none; box-shadow:none; background-color:#707070; color:#fff; text-align:center; font-size:16px; font-weight:600; letter-spacing:-0.5px;}
+.dt_sms_wrap .input_box .input_btn:hover{padding:0!important; background-color:#686868;}
+.dt_sms_wrap .input_box .input_btn:active{padding:0!important; background-color:#686868;}
+
+/* 매물 더보기 */
+.dt_more_wrap{position:relative; width:100%; height:42px; line-height:42px; border-width:0 1px 1px 1px; border-style:solid; border-color:#d4d4d4; box-sizing:border-box; background-color:#f4f4f4; color:#505050; text-align:center; font-size:15px; cursor:pointer;}
+.dt_more_wrap:hover{background-color:#f0f0f0;}
+.dt_more_wrap:active{background-color:#f0f0f0;}
+.dt_more_wrap img{vertical-align:top; margin:15px 0 0 5px;}
+
+/* 앱설치 */
+.dt_app_wrap{position:relative; width:100%; height:auto; margin-top:10px; padding:20px 25px; border:1px solid #d4d4d4; box-sizing:border-box;}
+.dt_app_wrap .app_img{position:absolute; top:20px; left:24px; width:60px; height:60px;}
+.dt_app_wrap .app_img img{display:block; width:100%; height:100%;}
+.dt_app_wrap .app_p{width:100%; height:auto; line-height:19px; margin-bottom:10px; padding-left:66px; box-sizing:border-box; color:#303030; font-size:15px;}
+.dt_app_wrap .app_p .tip{color:#fe5521; font-weight:900; margin-right:3px; letter-spacing:0px;}
+.dt_app_wrap .app_btn{display:block; width:100%; height:40px; line-height:40px; background-color:#017db4; color:#fff; text-align:center; font-size:16px; font-weight:600; cursor:pointer;}
+.dt_app_wrap .app_btn:hover{background-color:#0075a9;}
+.dt_app_wrap .app_btn:active{background-color:#0075a9;}
+
+/*---------------------------- 주소/위치 영역 ----------------------------*/
+/*-- 180205 수정_ (.dt_loca_wrap .map_li .show 높이값) --*/
+/*-- 180328 수정_ 길찾기버튼 추가 및 아이콘 수정 --*/
+.dt_loca_wrap{position:relative; width:100%; height:auto; margin-bottom:10px; padding:20px 25px; border:1px solid #d4d4d4; box-sizing:border-box;}
+.dt_loca_wrap .dt_h3{margin-bottom:10px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_h3_loca.png") no-repeat left center; background-size:130px 20px;}
+
+.dt_loca_wrap .loca_ul{position:relative; width:100%; height:auto;}
+.dt_loca_wrap .loca_li{position:relative; width:100%; height:auto;}
+.dt_loca_wrap .loca_li .loca_left{position:absolute; top:0; left:0px; width:90px; height:28px; line-height:28px; color:#808080; font-size:15px;}
+.dt_loca_wrap .loca_li .loca_right{position:relative; height:auto; line-height:20px; padding:4px 0 4px 90px; box-sizing:border-box; color:#000; font-size:15px; word-break:keep-all;}
+
+.dt_loca_wrap .map_li{position:relative; width:100%; height:auto; padding:8px 0 10px 0;}
+.dt_loca_wrap .map_li .map{position:relative; width:100%; height:200px; background-color:#f8f8f8;}
+.dt_loca_wrap .map_li .map_info{position:absolute; width:250px; height:auto; top:45%; left:50%; z-index:10; margin-top:-32px; margin-left:-125px; padding:9px 0; border-radius:5px; background:rgba(0,0,0,0.7); box-shadow:0px 1px 5px rgba(54, 86, 108, 0.76); font-size:13px; color:#fff; line-height:21px; text-align:center;}
+	/*-- 탭메뉴 영역 --*/
+.dt_loca_wrap .map_li .btn_box{position:relative; width:100%; height:auto; border-top:1px solid #d4d4d4; border-bottom:1px solid #d4d4d4; box-sizing:border-box;}
+.dt_loca_wrap .map_li .btn_box:after{content:""; display:block; clear:both;}
+		/*-- 4개(지도,로드뷰,주변시설,지적도) --*/
+.dt_loca_wrap .map_li .btn_box .btn_map{width:33%; height:38px; line-height:38px; box-sizing:border-box; color:#505050; text-align:center; font-size:14px; float:left; cursor:pointer;}
+.dt_loca_wrap .map_li .btn_box .btn_map:active{background-color:#f8f8f8;}
+.dt_loca_wrap .map_li .btn_box .btn_map.def{width:22%; border-right:1px solid #d4d4d4; border-left:1px solid #d4d4d4;}
+.dt_loca_wrap .map_li .btn_box .btn_map.road,
+.dt_loca_wrap .map_li .btn_box .btn_map.surround,
+.dt_loca_wrap .map_li .btn_box .btn_map.land{width:26%; border-right:1px solid #d4d4d4;}
+.dt_loca_wrap .map_li .btn_box .btn_map.def.on,
+.dt_loca_wrap .map_li .btn_box .btn_map.road.on,
+.dt_loca_wrap .map_li .btn_box .btn_map.surround.on,
+.dt_loca_wrap .map_li .btn_box .btn_map.land.on{font-weight:bold;}
+.dt_loca_wrap .map_li .btn_box .btn_map.def.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map.road.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map.surround.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map.land.on .on_border{display:inline-block; position:absolute; top:-1px; left:0; height:40px; box-sizing:border-box;}
+.dt_loca_wrap .map_li .btn_box .btn_map.def.on .on_border{left:0; width:22%; border:2px solid #505050;}
+.dt_loca_wrap .map_li .btn_box .btn_map.road.on .on_border{left:22%;}
+.dt_loca_wrap .map_li .btn_box .btn_map.surround.on .on_border{left:48%;}
+.dt_loca_wrap .map_li .btn_box .btn_map.land.on .on_border{left:74%;}
+.dt_loca_wrap .map_li .btn_box .btn_map.road.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map.surround.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map.land.on .on_border{width:26%; border-top:2px solid #505050; border-right:2px solid #505050; border-bottom:2px solid #505050; border-left:1px solid #505050; -webkit-box-shadow:-1px 0 0 #505050; box-shadow:-1px 0 0 #505050;}
+		/*-- // 4개(지도,로드뷰,주변시설,지적도) --*/
+		/*-- 5개(지도,로드뷰,주변시설,지적도,길찾기) --*/
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5{height:38px; line-height:38px; box-sizing:border-box; color:#505050; text-align:center; font-size:14px; float:left; cursor:pointer;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5:active{background-color:#f8f8f8;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.def{width:20%; border-right:1px solid #d4d4d4; border-left:1px solid #d4d4d4;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.road,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.surround,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.land,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.path{width:20%; border-right:1px solid #d4d4d4;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.def.on,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.road.on,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.surround.on,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.land.on,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.path.on{font-weight:bold;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.def.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.road.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.surround.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.land.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.path.on .on_border{display:inline-block; position:absolute; top:-1px; left:0; height:40px; box-sizing:border-box;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.def.on .on_border{left:0; width:20%; border:2px solid #505050;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.road.on .on_border{left:20%;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.surround.on .on_border{left:40%;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.land.on .on_border{left:60%;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.path.on .on_border{left:80%;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.road.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.surround.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.land.on .on_border,
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5.path.on .on_border{width:20%; border-top:2px solid #505050; border-right:2px solid #505050; border-bottom:2px solid #505050; border-left:1px solid #505050; -webkit-box-shadow:-1px 0 0 #505050; box-shadow:-1px 0 0 #505050;}
+		/*-- // 5개(지도,로드뷰,주변시설,지적도,길찾기) --*/
+.dt_loca_wrap .map_li .btn_box .btn_map img{vertical-align:top; margin:10px 5px 0 -5px;}
+.dt_loca_wrap .map_li .btn_box .btn_map_menu5 img.style2{vertical-align:middle; margin:-3px 5px 0 -5px;}
+	/*-- // 탭메뉴 영역 --*/
+
+/*---------------------------- 교통정보 영역 ----------------------------*/
+.dt_transport_wrap{position:relative; width:100%; height:auto; margin-bottom:10px; padding:20px 25px 10px 25px; border:1px solid #d4d4d4; box-sizing:border-box;}
+.dt_transport_wrap .dt_h3{margin-bottom:10px; background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/img_h3_transport.png") no-repeat left center; background-size:130px 20px;}
+.dt_transport_wrap .data_none{padding:50px 0;}
+.dt_transport_wrap .transport_ul{position:relative; width:100%; height:auto;}
+.dt_transport_wrap .transport_li{position:relative; width:100%; height:auto;}
+.dt_transport_wrap .transport_li:nth-of-type(1){padding-bottom:10px;}
+.dt_transport_wrap .transport_li:nth-of-type(2){padding-top:10px; padding-bottom:10px; border-top:1px solid #ccc;}
+.dt_transport_wrap .transport_li .data_none{height:26px; line-height:26px; padding:0 0 0 90px; text-align:left; font-weight:normal;}
+.dt_transport_wrap .transport_li .transport_left{position:absolute; left:0; width:90px; height:26px; line-height:26px; color:#808080; font-size:15px;}
+.dt_transport_wrap .transport_li:nth-of-type(1) .transport_left{top:0px;}
+.dt_transport_wrap .transport_li:nth-of-type(2) .transport_left{top:10px;}
+.dt_transport_wrap .transport_li .transport_left .trans_num_txt{margin-left:5px; color:#ff2e2e;}
+.dt_transport_wrap .transport_li .transport_right{position:relative; width:100%; height:auto; padding-left:90px; box-sizing:border-box;}
+.dt_transport_wrap .transport_li .transport_right:after{content:""; display:block; clear:both;}
+.dt_transport_wrap .transport_li .transport_right .bus, .dt_transport_wrap .transport_li .transport_right .metro{line-height:26px; color:#000; font-size:15px; word-break:keep-all;}
+.dt_transport_wrap .transport_li .transport_right .metro{width:50%; float:left; box-sizing:border-box;}
+.dt_transport_wrap .transport_li .transport_right .distance{margin-left:5px; font-size:13px; color:#808080;}
+
+.dt_transport_wrap .transport_li .transport_right .bus0{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus0.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 공용 */
+.dt_transport_wrap .transport_li .transport_right .bus1{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus1.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 공항 */
+.dt_transport_wrap .transport_li .transport_right .bus2{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus2.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 마을 */
+.dt_transport_wrap .transport_li .transport_right .bus3{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus3.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 간선 */
+.dt_transport_wrap .transport_li .transport_right .bus4{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus4.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 지선 */
+.dt_transport_wrap .transport_li .transport_right .bus5{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus5.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 순환 */
+.dt_transport_wrap .transport_li .transport_right .bus6{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus6.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 광역 */
+.dt_transport_wrap .transport_li .transport_right .bus7{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus7.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 인천 */
+.dt_transport_wrap .transport_li .transport_right .bus8{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus8.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 경기 */
+.dt_transport_wrap .transport_li .transport_right .bus9{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus9.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 폐지 */
+.dt_transport_wrap .transport_li .transport_right .bus90{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus90.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 급행 */
+.dt_transport_wrap .transport_li .transport_right .bus91{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus91.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 직행 */
+.dt_transport_wrap .transport_li .transport_right .bus92{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus92.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 좌석 */
+.dt_transport_wrap .transport_li .transport_right .bus93{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus93.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 시외 */
+.dt_transport_wrap .transport_li .transport_right .bus94{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus94.png") no-repeat left 5px; background-size:42px 16px; padding-left:50px;}/* 농어촌 */
+.dt_transport_wrap .transport_li .transport_right .bus95{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus95.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 외곽 */
+.dt_transport_wrap .transport_li .transport_right .bus99{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/bus99.png") no-repeat left 5px; background-size:30px 16px; padding-left:38px;}/* 일반 */
+
+.dt_transport_wrap .transport_li .transport_right .sb001{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb001.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 경강선 */
+.dt_transport_wrap .transport_li .transport_right .sb002{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb002.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 경부선 */
+.dt_transport_wrap .transport_li .transport_right .sb003{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb003.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 경원선 */
+.dt_transport_wrap .transport_li .transport_right .sb004{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb004.png") no-repeat left 5px; background-size:62px 16px; padding-left:70px;}/* 경의중앙선 */
+.dt_transport_wrap .transport_li .transport_right .sb005{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb005.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 경인선 */
+.dt_transport_wrap .transport_li .transport_right .sb006{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb006.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 경춘선 */
+.dt_transport_wrap .transport_li .transport_right .sb007{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb007.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 고속선 */
+.dt_transport_wrap .transport_li .transport_right .sb008{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb008.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 과천선 */
+.dt_transport_wrap .transport_li .transport_right .sb009{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb009.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 광주1호선 */
+.dt_transport_wrap .transport_li .transport_right .sb010{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb010.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 대구1호선 */
+.dt_transport_wrap .transport_li .transport_right .sb011{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb011.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 대구2호선 */
+.dt_transport_wrap .transport_li .transport_right .sb012{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb012.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 대구3호선 */
+.dt_transport_wrap .transport_li .transport_right .sb013{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb013.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 대전1호선 */
+.dt_transport_wrap .transport_li .transport_right .sb014{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb014.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 동해선 */
+.dt_transport_wrap .transport_li .transport_right .sb015{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb015.png") no-repeat left 5px; background-size:83px 16px; padding-left:91px;}/* 부산김해경전철 */
+.dt_transport_wrap .transport_li .transport_right .sb016{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb016.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 부산1호선 */
+.dt_transport_wrap .transport_li .transport_right .sb017{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb017.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 부산2호선 */
+.dt_transport_wrap .transport_li .transport_right .sb018{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb018.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 부산3호선 */
+.dt_transport_wrap .transport_li .transport_right .sb019{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb019.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 부산4호선 */
+.dt_transport_wrap .transport_li .transport_right .sb020{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb020.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 수인선 */
+.dt_transport_wrap .transport_li .transport_right .sb021{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb021.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 안산선 */
+.dt_transport_wrap .transport_li .transport_right .sb022{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb022.png") no-repeat left 5px; background-size:52px 16px; padding-left:60px;}/* 에버라인 */
+.dt_transport_wrap .transport_li .transport_right .sb023{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb023.png") no-repeat left 5px; background-size:73px 16px; padding-left:81px;}/* 의정부경전철 */
+.dt_transport_wrap .transport_li .transport_right .sb024{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb024.png") no-repeat left 5px; background-size:58px 16px; padding-left:66px;}/* 인천1호선 */
+.dt_transport_wrap .transport_li .transport_right .sb025{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb025.png") no-repeat left 5px; background-size:58px 16px; padding-left:66px;}/* 인천2호선 */
+.dt_transport_wrap .transport_li .transport_right .sb026{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb026.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 일산선 */
+.dt_transport_wrap .transport_li .transport_right .sb027{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb027.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 장항선 */
+.dt_transport_wrap .transport_li .transport_right .sb028{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb028.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 1호선 */
+.dt_transport_wrap .transport_li .transport_right .sb029{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb029.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 2호선 */
+.dt_transport_wrap .transport_li .transport_right .sb030{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb030.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 3호선 */
+.dt_transport_wrap .transport_li .transport_right .sb031{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb031.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 4호선 */
+.dt_transport_wrap .transport_li .transport_right .sb032{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb032.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 5호선 */
+.dt_transport_wrap .transport_li .transport_right .sb033{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb033.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 6호선 */
+.dt_transport_wrap .transport_li .transport_right .sb034{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb034.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 7호선 */
+.dt_transport_wrap .transport_li .transport_right .sb035{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb035.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 8호선 */
+.dt_transport_wrap .transport_li .transport_right .sb036{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb036.png") no-repeat left 5px; background-size:37px 16px; padding-left:45px;}/* 9호선 */
+.dt_transport_wrap .transport_li .transport_right .sb037{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb037.png") no-repeat left 5px; background-size:52px 16px; padding-left:60px;}/* 공항철도 */
+.dt_transport_wrap .transport_li .transport_right .sb038{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb038.png") no-repeat left 5px; background-size:40px 16px; padding-left:48px;}/* 분당선 */
+.dt_transport_wrap .transport_li .transport_right .sb039{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb039.png") no-repeat left 5px; background-size:52px 16px; padding-left:60px;}/* 신분당선 */
+.dt_transport_wrap .transport_li .transport_right .sb040{background:url("http://image.bbjang.com/imgs/bbjang/img_pc/view/sb040.png") no-repeat left 5px; background-size:52px 16px; padding-left:60px;}/* 우이신설 */
+
+/*-----매물url추가 180423 정우아(수정 및 추가)-----*/
+/*-------------------- 상단 영역 --------------------*/
+.dt_top_wrap{position:relative; width:100%; height:auto; margin:10px 0; border:1px solid #d4d4d4; box-sizing:border-box;}
+.dt_top_wrap:after{display:block; content:''; clear:both;}
+.dt_top_wrap .deal_num{width:auto; height:38px; line-height:38px; padding-left:10px; color:#303030; font-size:13px; float:left;}
+.dt_top_wrap .deal_bar_wrap{float:left; width:1px; height:38px; padding:12px 0; margin-left:10px; box-sizing:border-box;}
+.dt_top_wrap .deal_bar_wrap .deal_bar{width:100%; height:100%; background-color:#d4d4d4;}
+.deal_address_wrap{float:left; margin:6px 0 0 10px; width:auto; height:26px; line-height:24px; box-sizing:border-box; position:relative;}
+.deal_address_wrap .deal_address{width:212px; height:26px;}
+.deal_address_wrap .deal_address .deal_ad_input{display:block; position:absolute; top:0; left:0; width:100%; height:100%; border:0; outline:0; border:1px solid #ccc; border-right:0; border-radius:3px 0 0 3px; box-sizing:border-box; text-overflow:ellipsis; white-space:nowrap; padding:0 8px; overflow:hidden; cursor:pointer; font-size:14px; font-weight:600; color:#474747; background-color:#f6f6f6;}
+.deal_address_wrap .deal_address .adr_txt{padding:0 7px; font-size:13px; color:#474747; background-color:#f4f4f4; border:1px solid #ccc; box-sizing:border-box; width:100%; height:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.deal_address_wrap .url_copy{position:absolute; display:block; top:0; right:-66px; width:66px; height:26px; text-align:center; border:1px solid #006fb2; background-color:#0077c0; color:#fff; box-sizing:border-box; font-weight:400; border-radius:0 3px 3px 0; font-size:13px;}
+.deal_address_wrap .url_copy:active{background-color:#006fb2; cursor:pointer;}
+.deal_address_wrap .adr_go{padding:0 6px; width:100%; height:100%; background-color:#0077c0; border:1px solid #0271b5; border-left:0; box-sizing:border-box; font-size:12px; color:#fff;}
+.deal_address_wrap .adr_go:active{background-color:#0271b5;}
+.dt_top_wrap .top_right{position:absolute; top:0; right:5px; width:auto; height:auto;}
+.dt_top_wrap .top_right .top_btn{display:inline-block; vertical-align:top; width:auto; height:38px; line-height:38px; padding:0 10px; color:#303030; font-size:13px; cursor:pointer;}
+.dt_top_wrap .top_right .top_btn img{vertical-align:top; margin:11px 2px 0 0;}
+.dt_top_wrap .top_right .bar{display:inline-block; vertical-align:top; width:1px; height:18px; margin:10px 0; background-color:#d4d4d4;}
